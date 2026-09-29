@@ -1,6 +1,16 @@
+import vue from '@vitejs/plugin-vue';
 import { defineConfig } from 'vite-plus';
 
 export default defineConfig({
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.startsWith('forme-'),
+        },
+      },
+    }),
+  ],
   staged: {
     '*.{ts,vue,css,json,md,yaml}': 'vp run fmt',
     '*.{ts,vue}': 'vp run lint',
@@ -182,6 +192,12 @@ export default defineConfig({
           'unicorn/consistent-function-scoping': 'off',
         },
       },
+      {
+        files: ['apps/docs/src/main.ts'],
+        rules: {
+          'import/no-unassigned-import': 'off',
+        },
+      },
     ],
     options: {
       typeAware: true,
@@ -199,7 +215,14 @@ export default defineConfig({
     tasks: {
       validate: {
         command: 'vp run --cache validate',
-        dependsOn: ['fmt', 'lint', 'check', 'test:verbose'],
+        dependsOn: [
+          'fmt',
+          'lint',
+          'check',
+          '@pdfcn-vue/docs#typecheck',
+          '@pdfcn-vue/registry#typecheck',
+          'test:verbose',
+        ],
       },
     },
   },

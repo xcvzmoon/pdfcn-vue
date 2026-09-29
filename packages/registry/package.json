@@ -1,0 +1,45 @@
+{
+  "name": "@pdfcn-vue/registry",
+  "version": "0.0.0",
+  "description": "Vue source components and Forme primitives for the pdfcn registry.",
+  "license": "MIT",
+  "private": true,
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./forme": {
+      "types": "./dist/forme.d.mts",
+      "import": "./dist/forme.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch",
+    "test": "vp test",
+    "check": "vp check",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plus": "catalog:",
+    "vue": "catalog:",
+    "vue-tsc": "catalog:"
+  },
+  "dependencies": {
+    "@formepdf/core": "catalog:",
+    "@formepdf/vue": "catalog:"
+  }
+}
