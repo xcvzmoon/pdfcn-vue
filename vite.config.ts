@@ -20,7 +20,7 @@ export default defineConfig({
     },
     sortPackageJson: false,
     singleQuote: true,
-    ignorePatterns: ['tools/oxlint/anti-slop/**', 'CHANGELOG.md'],
+    ignorePatterns: ['tools/oxlint/anti-slop/**', 'CHANGELOG.md', '.agents/**'],
   },
   lint: {
     plugins: ['typescript', 'unicorn', 'import', 'vue', 'oxc'],
@@ -187,7 +187,7 @@ export default defineConfig({
       typeAware: true,
       typeCheck: true,
     },
-    ignorePatterns: ['tools/oxlint/anti-slop/**'],
+    ignorePatterns: ['tools/oxlint/anti-slop/**', '.agents/**'],
   },
   test: {
     isolate: false,
