@@ -1,4 +1,16 @@
-export { Document, Page, Text, serialize } from '@formepdf/vue';
+export { Document, Page, View, Text as FormeText, Image, Svg, serialize } from '@formepdf/vue';
 export type { FormeDocument, Style } from '@formepdf/vue';
+export { default as Text } from './components/Text.vue';
+export { default as Heading } from './components/Heading.vue';
+export { default as Stack } from './components/Stack.vue';
+export { default as Section } from './components/Section.vue';
+export { default as Divider } from './components/Divider.vue';
+export { default as PageBreak } from './components/PageBreak.vue';
+export { default as KeepTogether } from './components/KeepTogether.vue';
+export { default as Link } from './components/Link.vue';
+export { default as PdfList } from './components/PdfList.vue';
+export type { ListItem, ListVariant, PdfListProps } from './components/list.types.ts';
+export { resolveColor, THEME_COLOR_KEYS } from './lib/resolve-color.ts';
+export { mergePdfStyles } from './lib/styles.ts';
 export { default as PdfcnThemeProvider } from './components/PdfcnThemeProvider.vue';
 export { usePdfcnTheme } from './lib/theme.ts';
