@@ -5,7 +5,7 @@ import { professionalTheme } from '../../themes/professional.ts';
 import { pdfcnThemeKey } from '../lib/theme.ts';
 
 const props = defineProps<{
-  theme?: PdfcnTheme;
+  theme?: PdfcnTheme | undefined;
 }>();
 
 provide(
