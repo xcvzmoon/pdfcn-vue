@@ -215,7 +215,14 @@ export default defineConfig({
     tasks: {
       validate: {
         command: 'vp run --cache validate',
-        dependsOn: ['fmt', 'lint', 'check', 'test:verbose'],
+        dependsOn: [
+          'fmt',
+          'lint',
+          'check',
+          '@pdfcn-vue/docs#typecheck',
+          '@pdfcn-vue/registry#typecheck',
+          'test:verbose',
+        ],
       },
     },
   },
