@@ -10,10 +10,10 @@ const props = withDefaults(
   defineProps<{
     href: string;
     align?: 'left' | 'center' | 'right';
-    color?: string;
+    color?: string | undefined;
     variant?: 'default' | 'muted' | 'primary';
     underline?: 'always' | 'none';
-    style?: Style;
+    style?: Style | undefined;
   }>(),
   { variant: 'default', underline: 'always' },
 );

@@ -11,11 +11,11 @@ const props = withDefaults(
   defineProps<{
     spacing?: 'none' | 'sm' | 'md' | 'lg';
     variant?: 'solid' | 'dashed' | 'dotted';
-    color?: string;
+    color?: string | undefined;
     thickness?: 'thin' | 'medium' | 'thick';
-    label?: string;
-    width?: string | number;
-    style?: Style;
+    label?: string | undefined;
+    width?: string | number | undefined;
+    style?: Style | undefined;
   }>(),
   { spacing: 'md', variant: 'solid', thickness: 'thin' },
 );

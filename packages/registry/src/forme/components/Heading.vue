@@ -14,12 +14,12 @@ const props = withDefaults(
   defineProps<{
     level?: HeadingLevel;
     align?: 'left' | 'center' | 'right';
-    color?: string;
+    color?: string | undefined;
     transform?: 'uppercase' | 'lowercase' | 'capitalize';
     weight?: HeadingWeight;
     tracking?: HeadingTracking;
     noMargin?: boolean;
-    style?: Style;
+    style?: Style | undefined;
   }>(),
   { level: 1, weight: 'bold', tracking: 'normal' },
 );
