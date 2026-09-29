@@ -1,6 +1,16 @@
+import vue from '@vitejs/plugin-vue';
 import { defineConfig } from 'vite-plus';
 
 export default defineConfig({
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.startsWith('forme-'),
+        },
+      },
+    }),
+  ],
   staged: {
     '*.{ts,vue,css,json,md,yaml}': 'vp run fmt',
     '*.{ts,vue}': 'vp run lint',
@@ -180,6 +190,12 @@ export default defineConfig({
         files: ['apps/web/**'],
         rules: {
           'unicorn/consistent-function-scoping': 'off',
+        },
+      },
+      {
+        files: ['apps/docs/src/main.ts'],
+        rules: {
+          'import/no-unassigned-import': 'off',
         },
       },
     ],

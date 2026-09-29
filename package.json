@@ -15,6 +15,7 @@
     "release": "genbumppush --yes"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "catalog:",
     "genbumppush": "catalog:",
     "vite-plus": "catalog:"
   },
