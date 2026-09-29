@@ -13,13 +13,13 @@ const props = withDefaults(
   defineProps<{
     variant?: TextVariant;
     align?: 'left' | 'center' | 'right' | 'justify';
-    color?: string;
+    color?: string | undefined;
     weight?: TextWeight;
     italic?: boolean;
     decoration?: 'underline' | 'line-through' | 'none';
     transform?: 'uppercase' | 'lowercase' | 'capitalize';
     noMargin?: boolean;
-    style?: Style;
+    style?: Style | undefined;
   }>(),
   { weight: 'normal', decoration: 'none' },
 );

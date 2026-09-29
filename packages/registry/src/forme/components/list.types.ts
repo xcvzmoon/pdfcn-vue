@@ -20,5 +20,5 @@ export type PdfListProps = {
   variant?: ListVariant;
   gap?: 'xs' | 'sm' | 'md';
   noWrap?: boolean;
-  style?: Style;
+  style?: Style | undefined;
 };

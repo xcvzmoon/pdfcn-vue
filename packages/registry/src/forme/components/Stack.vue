@@ -15,7 +15,7 @@ const props = withDefaults(
     justify?: 'start' | 'center' | 'end' | 'between' | 'around';
     wrap?: boolean;
     noWrap?: boolean;
-    style?: Style;
+    style?: Style | undefined;
   }>(),
   { gap: 'md', direction: 'vertical' },
 );

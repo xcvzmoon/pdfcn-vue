@@ -14,12 +14,12 @@ const props = withDefaults(
   defineProps<{
     spacing?: SectionSpacing;
     padding?: SectionPadding;
-    background?: string;
+    background?: string | undefined;
     border?: boolean;
     variant?: SectionVariant;
     accentColor?: string;
     noWrap?: boolean;
-    style?: Style;
+    style?: Style | undefined;
   }>(),
   { spacing: 'md', variant: 'default' },
 );
