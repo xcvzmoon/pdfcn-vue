@@ -33,7 +33,7 @@ export type GraphProps = {
   fullWidth?: boolean;
   containerPadding?: number;
   wrapperPadding?: number;
-  colors?: string[];
+  colors?: string[] | undefined;
   showValues?: boolean;
   showGrid?: boolean;
   legend?: GraphLegendPosition;
