@@ -1,0 +1,18 @@
+{
+  "name": "@pdfcn-vue/build-registry",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Builds shadcn-vue registry JSON payloads from packages/registry sources.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "node src/cli.ts",
+    "test": "vp test",
+    "typecheck": "vp exec tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  }
+}
