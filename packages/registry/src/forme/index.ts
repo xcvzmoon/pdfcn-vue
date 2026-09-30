@@ -87,3 +87,4 @@ export { resolveColor, THEME_COLOR_KEYS } from './lib/resolve-color.ts';
 export { mergePdfStyles } from './lib/styles.ts';
 export { default as PdfcnThemeProvider } from './components/PdfcnThemeProvider.vue';
 export { usePdfcnTheme } from './lib/theme.ts';
+export * from './blocks/index.ts';
