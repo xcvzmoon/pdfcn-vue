@@ -1,0 +1,18 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "link",
+  "type": "registry:component",
+  "title": "Link",
+  "description": "External or internal PDF link.",
+  "author": "pdfcn-vue",
+  "dependencies": ["@formepdf/vue@^0.25.0", "vue@^3.4.0"],
+  "registryDependencies": ["@pdfcn-vue/pdfcn-core"],
+  "files": [
+    {
+      "path": "registry/components/pdf/Link.vue",
+      "content": "<script setup lang=\"ts\">\n  import type { Style } from '@formepdf/vue';\n  import { Link as FormeLink, Text as FormeText } from '@formepdf/vue';\n  import { computed } from 'vue';\n  import { resolveColor } from '@/lib/pdfcn/resolve-color';\n  import { mergePdfStyles } from '@/lib/pdfcn/styles';\n  import { usePdfcnTheme } from '@/lib/pdfcn/theme';\n\n  const props = withDefaults(\n    defineProps<{\n      href: string;\n      align?: 'left' | 'center' | 'right';\n      color?: string | undefined;\n      variant?: 'default' | 'muted' | 'primary';\n      underline?: 'always' | 'none';\n      style?: Style | undefined;\n    }>(),\n    { variant: 'default', underline: 'always' },\n  );\n\n  const theme = usePdfcnTheme();\n  const pdfStyle = computed<Style>(() => {\n    const current = theme.value;\n    const colors = {\n      default: current.colors.accent,\n      muted: current.colors.mutedForeground,\n      primary: current.colors.primary,\n    };\n    const weights = {\n      default: current.primitives.fontWeights.medium,\n      muted: current.primitives.fontWeights.regular,\n      primary: current.primitives.fontWeights.semibold,\n    };\n    return mergePdfStyles(\n      {\n        color: props.color ? resolveColor(props.color, current.colors) : colors[props.variant],\n        fontFamily: current.typography.body.fontFamily,\n        fontSize: current.typography.body.fontSize,\n        fontWeight: weights[props.variant],\n        lineHeight: current.typography.body.lineHeight,\n        marginBottom: current.spacing.paragraphGap,\n        textAlign: props.align,\n        textDecoration: props.underline === 'none' ? 'none' : 'underline',\n      },\n      props.style,\n    );\n  });\n</script>\n\n<template>\n  <FormeText :style=\"pdfStyle\">\n    <FormeLink\n      :href=\"href\"\n      :style=\"pdfStyle\"\n      ><slot\n    /></FormeLink>\n  </FormeText>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["component"]
+}

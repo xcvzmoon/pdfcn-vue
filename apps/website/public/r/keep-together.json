@@ -1,0 +1,18 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "keep-together",
+  "type": "registry:component",
+  "title": "KeepTogether",
+  "description": "Keep child content on the same page when possible.",
+  "author": "pdfcn-vue",
+  "dependencies": ["@formepdf/vue@^0.25.0"],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/components/pdf/KeepTogether.vue",
+      "content": "<script setup lang=\"ts\">\n  import type { Style } from '@formepdf/vue';\n  import { View } from '@formepdf/vue';\n\n  defineProps<{ style?: Style }>();\n</script>\n\n<template>\n  <View\n    :wrap=\"false\"\n    :style=\"style\"\n    ><slot\n  /></View>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["component"]
+}

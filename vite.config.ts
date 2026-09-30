@@ -28,9 +28,22 @@ export default defineConfig({
       ],
       newlinesBetween: false,
     },
+    sortTailwindcss: {
+      stylesheet: 'apps/website/app/assets/css/tailwind.css',
+      attributes: ['class'],
+      functions: ['clsx', 'cn'],
+      preserveWhitespace: true,
+    },
     sortPackageJson: false,
     singleQuote: true,
-    ignorePatterns: ['tools/oxlint/anti-slop/**', 'CHANGELOG.md', '.agents/**'],
+    singleAttributePerLine: true,
+    vueIndentScriptAndStyle: true,
+    ignorePatterns: [
+      'tools/oxlint/anti-slop/**',
+      'CHANGELOG.md',
+      '.agents/**',
+      'apps/website/app/components/ui/**',
+    ],
   },
   lint: {
     plugins: ['typescript', 'unicorn', 'import', 'vue', 'oxc'],
@@ -187,15 +200,9 @@ export default defineConfig({
     },
     overrides: [
       {
-        files: ['apps/web/**'],
+        files: ['apps/website/**'],
         rules: {
           'unicorn/consistent-function-scoping': 'off',
-        },
-      },
-      {
-        files: ['apps/docs/src/main.ts'],
-        rules: {
-          'import/no-unassigned-import': 'off',
         },
       },
     ],
@@ -203,7 +210,11 @@ export default defineConfig({
       typeAware: true,
       typeCheck: true,
     },
-    ignorePatterns: ['tools/oxlint/anti-slop/**', '.agents/**'],
+    ignorePatterns: [
+      'tools/oxlint/anti-slop/**',
+      '.agents/**',
+      'apps/website/app/components/ui/**',
+    ],
   },
   test: {
     isolate: false,
@@ -214,12 +225,12 @@ export default defineConfig({
     cache: true,
     tasks: {
       validate: {
-        command: 'vp run --cache validate',
+        command: 'vp run --filter website build',
         dependsOn: [
           'fmt',
           'lint',
           'check',
-          '@pdfcn-vue/docs#typecheck',
+          'website#typecheck',
           '@pdfcn-vue/registry#typecheck',
           'test:verbose',
         ],

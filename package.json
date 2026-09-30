@@ -1,25 +1,27 @@
 {
   "name": "pdfcn-vue",
+  "description": "",
   "version": "0.0.0",
   "private": true,
-  "description": "",
   "type": "module",
   "scripts": {
     "prepare": "vp config",
     "fmt": "vp fmt",
     "lint": "vp lint",
     "check": "vp check",
-    "typecheck": "vp run --filter @pdfcn-vue/docs --filter @pdfcn-vue/registry --filter @pdfcn-vue/build-registry typecheck",
+    "typecheck": "vp run --recursive typecheck",
+    "build": "vp run --recursive build",
     "test": "vp test",
     "test:watch": "vp test --watch",
     "test:verbose": "vp test --reporter=verbose",
+    "release": "genbumppush --yes",
     "registry:build": "node tools/build-registry/src/cli.ts",
     "registry:e2e": "node tools/build-registry/scripts/e2e-install.ts",
-    "release": "genbumppush --yes"
+    "website": "vp run --filter website"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "catalog:",
-    "genbumppush": "catalog:",
+    "genbumppush": "catalog:tooling",
     "vite-plus": "catalog:"
   },
   "devEngines": {

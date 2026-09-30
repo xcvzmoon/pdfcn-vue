@@ -1,0 +1,44 @@
+{
+  "name": "website",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@fontsource-variable/geist": "catalog:website",
+    "@formepdf/core": "catalog:",
+    "@formepdf/vue": "catalog:",
+    "@lucide/vue": "catalog:website",
+    "@nuxtjs/color-mode": "catalog:website",
+    "@vueuse/core": "catalog:website",
+    "class-variance-authority": "catalog:website",
+    "clsx": "catalog:website",
+    "motion-v": "catalog:website",
+    "nuxt": "catalog:website",
+    "pdfjs-dist": "catalog:website",
+    "reka-ui": "catalog:website",
+    "shadcn-nuxt": "catalog:website",
+    "shiki": "catalog:website",
+    "tailwind-merge": "catalog:website",
+    "valibot": "catalog:website",
+    "vue": "catalog:",
+    "vue-router": "catalog:website",
+    "vue-sonner": "catalog:website"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "catalog:website",
+    "@types/node": "catalog:website",
+    "shadcn-vue": "catalog:website",
+    "tailwindcss": "catalog:website",
+    "tw-animate-css": "catalog:website",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

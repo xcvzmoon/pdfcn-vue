@@ -1,0 +1,18 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "section",
+  "type": "registry:component",
+  "title": "Section",
+  "description": "Titled section container with spacing from the theme.",
+  "author": "pdfcn-vue",
+  "dependencies": ["@formepdf/vue@^0.25.0", "vue@^3.4.0"],
+  "registryDependencies": ["@pdfcn-vue/pdfcn-core"],
+  "files": [
+    {
+      "path": "registry/components/pdf/Section.vue",
+      "content": "<script setup lang=\"ts\">\n  import type { Style } from '@formepdf/vue';\n  import { View } from '@formepdf/vue';\n  import { computed } from 'vue';\n  import { resolveColor } from '@/lib/pdfcn/resolve-color';\n  import { mergePdfStyles } from '@/lib/pdfcn/styles';\n  import { usePdfcnTheme } from '@/lib/pdfcn/theme';\n\n  export type SectionSpacing = 'none' | 'sm' | 'md' | 'lg' | 'xl';\n  export type SectionPadding = 'none' | 'sm' | 'md' | 'lg';\n  export type SectionVariant = 'default' | 'callout' | 'highlight' | 'card';\n\n  const props = withDefaults(\n    defineProps<{\n      spacing?: SectionSpacing;\n      padding?: SectionPadding;\n      background?: string | undefined;\n      border?: boolean;\n      variant?: SectionVariant;\n      accentColor?: string | undefined;\n      noWrap?: boolean;\n      style?: Style | undefined;\n    }>(),\n    { spacing: 'md', variant: 'default' },\n  );\n\n  const theme = usePdfcnTheme();\n  const pdfStyle = computed<Style>(() => {\n    const current = theme.value;\n    const spacing = current.primitives.spacing;\n    const margins = {\n      none: spacing[0],\n      sm: spacing[4],\n      md: current.spacing.sectionGap,\n      lg: spacing[8],\n      xl: spacing[12],\n    };\n    const paddings = { none: spacing[0], sm: spacing[3], md: spacing[4], lg: spacing[6] };\n    const framed = props.variant === 'card' || (props.variant === 'default' && props.border);\n    const accented = props.variant === 'callout' || props.variant === 'highlight';\n\n    return mergePdfStyles(\n      {\n        flexDirection: 'column',\n        marginVertical: margins[props.spacing],\n        padding: props.variant === 'card' || props.variant === 'highlight' ? spacing[4] : undefined,\n        paddingLeft: props.variant === 'callout' ? spacing[4] : undefined,\n        paddingVertical: props.variant === 'callout' ? spacing[2] : undefined,\n        backgroundColor: props.variant === 'highlight' ? current.colors.muted : undefined,\n        borderColor: framed ? current.colors.border : undefined,\n        borderWidth: framed ? spacing[0.5] : undefined,\n        borderRadius: framed ? current.primitives.borderRadius.md : undefined,\n        borderLeftColor: accented\n          ? resolveColor(props.accentColor ?? 'primary', current.colors)\n          : undefined,\n        borderLeftWidth: accented ? spacing[1] : undefined,\n      },\n      props.padding ? { padding: paddings[props.padding] } : undefined,\n      props.background\n        ? { backgroundColor: resolveColor(props.background, current.colors) }\n        : undefined,\n      props.style,\n    );\n  });\n</script>\n\n<template>\n  <View\n    :wrap=\"!noWrap\"\n    :style=\"pdfStyle\"\n    ><slot\n  /></View>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["component"]
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "report-financial",
+  "type": "registry:block",
+  "title": "Report Financial",
+  "description": "The Report Financial document block with sample data.",
+  "author": "pdfcn-vue",
+  "dependencies": ["vue@^3.4.0"],
+  "registryDependencies": [
+    "@pdfcn-vue/block-shared",
+    "@pdfcn-vue/pdfcn-core",
+    "@pdfcn-vue/theme-provider"
+  ],
+  "files": [
+    {
+      "path": "registry/components/pdf/blocks/report-financial/ReportFinancial.vue",
+      "content": "<script setup lang=\"ts\">\n  import type { PdfcnTheme } from '@/lib/pdfcn/pdf-themes';\n  import type { ReportFinancialData } from '@/components/pdf/blocks/report-financial/report-financial.types';\n  import { computed } from 'vue';\n  import PdfcnThemeProvider from '@/components/pdf/PdfcnThemeProvider.vue';\n  import { usePdfcnTheme } from '@/lib/pdfcn/theme';\n  import ReportLayout from '@/components/pdf/blocks/shared/ReportLayout.vue';\n  import { sampleReportFinancialData } from '@/components/pdf/blocks/report-financial/report-financial.sample';\n\n  const props = defineProps<{\n    data?: ReportFinancialData | undefined;\n    theme?: PdfcnTheme | undefined;\n  }>();\n\n  const report = computed(() => props.data ?? sampleReportFinancialData);\n  const fallbackTheme = usePdfcnTheme();\n  const resolvedTheme = computed(() => props.theme ?? fallbackTheme.value);\n\n  const graphColors = ['#0F172A'];\n</script>\n\n<template>\n  <PdfcnThemeProvider :theme=\"resolvedTheme\">\n    <ReportLayout\n      :data=\"report\"\n      title-prefix=\"Financial Report\"\n      status-label=\"Finance: Healthy\"\n      status-tone=\"success\"\n      graph-variant=\"line\"\n      graph-title=\"Revenue trajectory\"\n      graph-subtitle=\"Quarterly weighted revenue index\"\n      graph-legend=\"none\"\n      :graph-colors=\"graphColors\"\n    />\n  </PdfcnThemeProvider>\n</template>\n",
+      "type": "registry:block"
+    },
+    {
+      "path": "registry/components/pdf/blocks/report-financial/report-financial.types.ts",
+      "content": "import type { BaseReportData } from '@/components/pdf/blocks/shared/report.types';\n\nexport type ReportFinancialData = BaseReportData;\n",
+      "type": "registry:lib"
+    },
+    {
+      "path": "registry/components/pdf/blocks/report-financial/report-financial.sample.ts",
+      "content": "import type { ReportFinancialData } from '@/components/pdf/blocks/report-financial/report-financial.types';\n\nexport const sampleReportFinancialData: ReportFinancialData = {\n  author: 'Finance Ops',\n  generatedAt: 'February 23, 2026',\n  highlights: [\n    'Revenue accelerated after enterprise expansion campaign launch.',\n    'Gross margin improved due to infrastructure cost renegotiation.',\n    'Collections requires executive follow-up on two overdue accounts.',\n  ],\n  period: 'Q1 2026',\n  rows: [\n    {\n      label: 'Enterprise Sales',\n      owner: 'A. Patel',\n      progress: 88,\n      risk: 'Low',\n      status: 'On Track',\n    },\n    {\n      label: 'SMB Sales',\n      owner: 'L. Khan',\n      progress: 79,\n      risk: 'Medium',\n      status: 'On Track',\n    },\n    {\n      label: 'Collections',\n      owner: 'J. Reyes',\n      progress: 63,\n      risk: 'High',\n      status: 'At Risk',\n    },\n    {\n      label: 'Cost Optimization',\n      owner: 'K. Singh',\n      progress: 82,\n      risk: 'Low',\n      status: 'On Track',\n    },\n  ],\n  series: [\n    { label: 'W1', value: 72 },\n    { label: 'W2', value: 74 },\n    { label: 'W3', value: 76 },\n    { label: 'W4', value: 77 },\n    { label: 'W5', value: 79 },\n    { label: 'W6', value: 80 },\n    { label: 'W7', value: 81 },\n    { label: 'W8', value: 83 },\n    { label: 'W9', value: 82 },\n    { label: 'W10', value: 84 },\n    { label: 'W11', value: 86 },\n    { label: 'W12', value: 88 },\n  ],\n  subtitle: 'Revenue, margin, and expense control overview',\n  summary: [\n    { label: 'Revenue', tone: 'success', trend: '+14.2% QoQ', value: '$2.48M' },\n    {\n      label: 'Gross Margin',\n      tone: 'success',\n      trend: '+2.1 pts',\n      value: '61.8%',\n    },\n    { label: 'Opex', tone: 'success', trend: '-3.4% QoQ', value: '$0.93M' },\n    { label: 'Runway', tone: 'info', trend: 'Stable', value: '22 months' },\n  ],\n  title: 'Quarterly Financial Report',\n};\n",
+      "type": "registry:lib"
+    }
+  ],
+  "categories": ["block"]
+}
