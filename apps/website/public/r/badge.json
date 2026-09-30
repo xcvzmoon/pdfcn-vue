@@ -1,0 +1,23 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "badge",
+  "type": "registry:component",
+  "title": "Badge",
+  "description": "Compact status or category label.",
+  "author": "pdfcn-vue",
+  "dependencies": ["@formepdf/vue@^0.25.0", "vue@^3.4.0"],
+  "registryDependencies": ["@pdfcn-vue/pdfcn-core"],
+  "files": [
+    {
+      "path": "registry/components/pdf/Badge.vue",
+      "content": "<script setup lang=\"ts\">\n  import type { Style } from '@formepdf/vue';\n  import type { BadgeSize, BadgeVariant } from '@/components/pdf/badge.types';\n  import { Text, View } from '@formepdf/vue';\n  import { computed } from 'vue';\n  import { resolveColor } from '@/lib/pdfcn/resolve-color';\n  import { mergePdfStyles } from '@/lib/pdfcn/styles';\n  import { usePdfcnTheme } from '@/lib/pdfcn/theme';\n\n  const props = withDefaults(\n    defineProps<{\n      label?: string | undefined;\n      variant?: BadgeVariant;\n      size?: BadgeSize;\n      background?: string | undefined;\n      color?: string | undefined;\n      style?: Style | undefined;\n    }>(),\n    { size: 'md', variant: 'default' },\n  );\n\n  const theme = usePdfcnTheme();\n\n  const containerStyle = computed<Style>(() => {\n    const current = theme.value;\n    const { spacing, borderRadius } = current.primitives;\n    const c = current.colors;\n    const sizes = {\n      sm: { paddingHorizontal: spacing[2], paddingVertical: spacing[0.5] },\n      md: { paddingHorizontal: spacing[3], paddingVertical: spacing[1] },\n      lg: { paddingHorizontal: spacing[4], paddingVertical: spacing[2] },\n    };\n    const variants: Record<BadgeVariant, { backgroundColor: string; borderColor: string }> = {\n      default: { backgroundColor: c.muted, borderColor: c.border },\n      destructive: { backgroundColor: c.destructive, borderColor: c.destructive },\n      info: { backgroundColor: c.info, borderColor: c.info },\n      outline: { backgroundColor: c.background, borderColor: c.border },\n      primary: { backgroundColor: c.primary, borderColor: c.primary },\n      success: { backgroundColor: c.success, borderColor: c.success },\n      warning: { backgroundColor: c.warning, borderColor: c.warning },\n    };\n    const box = variants[props.variant];\n    return mergePdfStyles(\n      {\n        alignItems: 'center',\n        alignSelf: 'flex-start',\n        backgroundColor: props.background\n          ? resolveColor(props.background, current.colors)\n          : box.backgroundColor,\n        borderColor: box.borderColor,\n        borderRadius: borderRadius.full,\n        borderWidth: spacing[0.5],\n        flexDirection: 'row',\n      },\n      sizes[props.size],\n      props.style,\n    );\n  });\n\n  const textStyle = computed<Style>(() => {\n    const current = theme.value;\n    const c = current.colors;\n    const { fontWeights } = current.primitives;\n    const sizes = {\n      sm: current.primitives.typography.xs - 1,\n      md: current.primitives.typography.xs,\n      lg: current.primitives.typography.sm,\n    };\n    const colors: Record<BadgeVariant, string> = {\n      default: c.mutedForeground,\n      destructive: c.destructive,\n      info: c.info,\n      outline: c.foreground,\n      primary: c.primaryForeground,\n      success: c.success,\n      warning: c.warning,\n    };\n    return {\n      color: props.color ? resolveColor(props.color, current.colors) : colors[props.variant],\n      fontFamily: current.typography.body.fontFamily,\n      fontSize: sizes[props.size],\n      fontWeight: fontWeights.semibold,\n      letterSpacing: 0.3,\n      marginBottom: 0,\n      marginTop: 0,\n    };\n  });\n</script>\n\n<template>\n  <View :style=\"containerStyle\">\n    <Text :style=\"textStyle\">{{ label ?? '' }}</Text>\n  </View>\n</template>\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "registry/components/pdf/badge.types.ts",
+      "content": "export type BadgeVariant =\n  | 'default'\n  | 'primary'\n  | 'success'\n  | 'warning'\n  | 'destructive'\n  | 'info'\n  | 'outline';\nexport type BadgeSize = 'sm' | 'md' | 'lg';\n",
+      "type": "registry:lib"
+    }
+  ],
+  "categories": ["component"]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "alert",
+  "type": "registry:component",
+  "title": "Alert",
+  "description": "Inline callout with tone variants.",
+  "author": "pdfcn-vue",
+  "dependencies": ["@formepdf/vue@^0.25.0", "vue@^3.4.0"],
+  "registryDependencies": ["@pdfcn-vue/pdfcn-core"],
+  "files": [
+    {
+      "path": "registry/components/pdf/Alert.vue",
+      "content": "<script setup lang=\"ts\">\n  import type { Style } from '@formepdf/vue';\n  import type { AlertVariant } from '@/components/pdf/alert.types';\n  import { Svg, Text, View } from '@formepdf/vue';\n  import { computed } from 'vue';\n  import { mergePdfStyles } from '@/lib/pdfcn/styles';\n  import { usePdfcnTheme } from '@/lib/pdfcn/theme';\n\n  const props = withDefaults(\n    defineProps<{\n      variant?: AlertVariant;\n      title?: string | undefined;\n      showIcon?: boolean;\n      showBorder?: boolean;\n      style?: Style | undefined;\n    }>(),\n    { showBorder: true, showIcon: true, variant: 'info' },\n  );\n\n  const theme = usePdfcnTheme();\n\n  function iconContent(variant: AlertVariant, color: string): string {\n    const stroke = `stroke=\"${color}\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"`;\n    if (variant === 'error') {\n      return `<circle cx=\"8\" cy=\"8\" r=\"7\" ${stroke} /><line x1=\"5.5\" y1=\"5.5\" x2=\"10.5\" y2=\"10.5\" ${stroke} /><line x1=\"10.5\" y1=\"5.5\" x2=\"5.5\" y2=\"10.5\" ${stroke} />`;\n    }\n    if (variant === 'success') {\n      return `<circle cx=\"8\" cy=\"8\" r=\"7\" ${stroke} /><path d=\"M5 8 L7 10 L11 6\" ${stroke} />`;\n    }\n    if (variant === 'warning') {\n      return `<path d=\"M8 1.5 L15 14.5 L1 14.5 Z\" ${stroke} /><line x1=\"8\" y1=\"6\" x2=\"8\" y2=\"10\" ${stroke} /><circle cx=\"8\" cy=\"12.5\" r=\"0.75\" fill=\"${color}\" />`;\n    }\n    return `<circle cx=\"8\" cy=\"8\" r=\"7\" ${stroke} /><circle cx=\"8\" cy=\"4.5\" r=\"1\" fill=\"${color}\" /><line x1=\"8\" y1=\"7\" x2=\"8\" y2=\"11.5\" ${stroke} />`;\n  }\n\n  const variantColor = computed(() => {\n    const c = theme.value.colors;\n    return {\n      error: c.destructive,\n      info: c.info,\n      success: c.success,\n      warning: c.warning,\n    }[props.variant];\n  });\n\n  const containerStyle = computed<Style>(() => {\n    const current = theme.value;\n    return mergePdfStyles(\n      {\n        backgroundColor: current.colors.muted,\n        borderRadius: 4,\n        borderLeftColor: props.showBorder ? variantColor.value : undefined,\n        borderLeftWidth: props.showBorder ? 4 : 0,\n        flexDirection: 'row',\n        marginBottom: current.spacing.componentGap,\n        padding: 12,\n      },\n      props.style,\n    );\n  });\n\n  const iconContainerStyle = computed<Style>(() => ({\n    alignItems: 'center',\n    justifyContent: 'flex-start',\n    marginRight: 10,\n    paddingTop: 2,\n    width: 20,\n  }));\n\n  const contentStyle = computed<Style>(() => ({ flex: 1 }));\n\n  const titleStyle = computed<Style>(() => {\n    const current = theme.value;\n    return {\n      color: current.colors.foreground,\n      fontFamily: current.typography.heading.fontFamily,\n      fontSize: current.primitives.typography.sm,\n      fontWeight: current.primitives.fontWeights.semibold,\n      marginBottom: 4,\n      marginTop: 0,\n    };\n  });\n</script>\n\n<template>\n  <View\n    :wrap=\"false\"\n    :style=\"containerStyle\"\n  >\n    <View\n      v-if=\"showIcon\"\n      :style=\"iconContainerStyle\"\n    >\n      <Svg\n        :width=\"16\"\n        :height=\"16\"\n        viewBox=\"0 0 16 16\"\n        :content=\"iconContent(variant, variantColor)\"\n      />\n    </View>\n    <View :style=\"contentStyle\">\n      <Text\n        v-if=\"title\"\n        :style=\"titleStyle\"\n        >{{ title }}</Text\n      >\n      <slot />\n    </View>\n  </View>\n</template>\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "registry/components/pdf/alert.types.ts",
+      "content": "export type AlertVariant = 'info' | 'success' | 'warning' | 'error';\n",
+      "type": "registry:lib"
+    }
+  ],
+  "categories": ["component"]
+}

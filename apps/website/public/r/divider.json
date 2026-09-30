@@ -1,0 +1,23 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "divider",
+  "type": "registry:component",
+  "title": "Divider",
+  "description": "Horizontal or vertical divider with theme colors.",
+  "author": "pdfcn-vue",
+  "dependencies": ["@formepdf/vue@^0.25.0", "vue@^3.4.0"],
+  "registryDependencies": ["@pdfcn-vue/pdfcn-core"],
+  "files": [
+    {
+      "path": "registry/components/pdf/Divider.vue",
+      "content": "<script setup lang=\"ts\">\n  import type { Style } from '@formepdf/vue';\n  import { Text, View } from '@formepdf/vue';\n  import { computed } from 'vue';\n  import { resolveColor } from '@/lib/pdfcn/resolve-color';\n  import { mergePdfStyles } from '@/lib/pdfcn/styles';\n  import { usePdfcnTheme } from '@/lib/pdfcn/theme';\n  import DividerLine from '@/components/pdf/DividerLine.vue';\n\n  const props = withDefaults(\n    defineProps<{\n      spacing?: 'none' | 'sm' | 'md' | 'lg';\n      variant?: 'solid' | 'dashed' | 'dotted';\n      color?: string | undefined;\n      thickness?: 'thin' | 'medium' | 'thick';\n      label?: string | undefined;\n      width?: string | number | undefined;\n      style?: Style | undefined;\n    }>(),\n    { spacing: 'md', variant: 'solid', thickness: 'thin' },\n  );\n\n  const theme = usePdfcnTheme();\n  const lineColor = computed(() => resolveColor(props.color ?? 'border', theme.value.colors));\n  const lineThickness = computed(() => {\n    const spacing = theme.value.primitives.spacing;\n    return { thin: spacing[0.5], medium: spacing[1], thick: spacing[2] }[props.thickness];\n  });\n  const containerStyle = computed<Style>(() => {\n    const current = theme.value;\n    const margins = {\n      none: current.primitives.spacing[0],\n      sm: current.spacing.paragraphGap,\n      md: current.spacing.componentGap,\n      lg: current.spacing.sectionGap,\n    };\n    return mergePdfStyles(\n      {\n        alignItems: 'center',\n        flexDirection: 'row',\n        marginVertical: margins[props.spacing],\n        width: props.width,\n      },\n      props.style,\n    );\n  });\n  const labelStyle = computed<Style>(() => ({\n    color: props.color ? lineColor.value : theme.value.colors.mutedForeground,\n    fontFamily: theme.value.typography.body.fontFamily,\n    fontSize: theme.value.primitives.typography.xs,\n    fontWeight: theme.value.primitives.fontWeights.medium,\n    letterSpacing: theme.value.primitives.letterSpacing.wider * 10,\n    paddingHorizontal: theme.value.primitives.spacing[3],\n    textTransform: 'uppercase',\n  }));\n</script>\n\n<template>\n  <View :style=\"containerStyle\">\n    <DividerLine\n      :variant=\"variant\"\n      :color=\"lineColor\"\n      :thickness=\"lineThickness\"\n    />\n    <template v-if=\"label\">\n      <Text :style=\"labelStyle\">{{ label }}</Text>\n      <DividerLine\n        :variant=\"variant\"\n        :color=\"lineColor\"\n        :thickness=\"lineThickness\"\n      />\n    </template>\n  </View>\n</template>\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "registry/components/pdf/DividerLine.vue",
+      "content": "<script setup lang=\"ts\">\n  import type { Style } from '@formepdf/vue';\n  import { View } from '@formepdf/vue';\n  import { computed } from 'vue';\n\n  const props = defineProps<{\n    variant: 'solid' | 'dashed' | 'dotted';\n    color: string;\n    thickness: number;\n  }>();\n\n  const lineStyle = computed<Style>(() => ({\n    flexDirection: 'row',\n    flexGrow: 1,\n    alignItems: 'center',\n    justifyContent: props.variant === 'dotted' ? 'space-between' : 'flex-start',\n    gap: props.variant === 'dotted' ? 3 : 4,\n    minHeight: Math.max(props.thickness, 2),\n  }));\n  const segmentStyle = computed<Style>(() => ({\n    backgroundColor: props.color,\n    borderRadius: props.variant === 'dotted' ? props.thickness / 2 : 0,\n    flexGrow: props.variant === 'dotted' ? 0 : 1,\n    flexShrink: 0,\n    height: props.thickness,\n    width: props.variant === 'dotted' ? props.thickness : 0,\n  }));\n</script>\n\n<template>\n  <View :style=\"lineStyle\">\n    <View\n      v-for=\"index in variant === 'solid' ? 1 : 24\"\n      :key=\"index\"\n      :style=\"segmentStyle\"\n    />\n  </View>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["component"]
+}

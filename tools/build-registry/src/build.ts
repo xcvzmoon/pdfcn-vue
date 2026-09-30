@@ -20,7 +20,7 @@ const NPM_DEPENDENCIES = {
 } as const satisfies Record<string, string>;
 
 const REGISTRY_ITEM_SCHEMA_URL = 'https://shadcn-vue.com/schema/registry-item.json';
-const DEFAULT_REGISTRY_BASE = 'https://pdfcn-vue.example.com/r';
+const DEFAULT_REGISTRY_BASE = '@pdfcn-vue';
 
 function toDependencySpec(packageName: string): string {
   if (packageName === 'vue') return `vue@${NPM_DEPENDENCIES.vue}`;
@@ -31,6 +31,7 @@ function toDependencySpec(packageName: string): string {
 }
 
 function toRegistryDependencyUrl(registryBase: string, itemName: string): string {
+  if (registryBase === DEFAULT_REGISTRY_BASE) return `${registryBase}/${itemName}`;
   const base = registryBase.endsWith('/') ? registryBase.slice(0, -1) : registryBase;
   return `${base}/${itemName}.json`;
 }

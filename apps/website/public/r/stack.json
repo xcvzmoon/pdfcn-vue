@@ -1,0 +1,18 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "stack",
+  "type": "registry:component",
+  "title": "Stack",
+  "description": "Vertical or horizontal stack layout primitive.",
+  "author": "pdfcn-vue",
+  "dependencies": ["@formepdf/vue@^0.25.0", "vue@^3.4.0"],
+  "registryDependencies": ["@pdfcn-vue/pdfcn-core"],
+  "files": [
+    {
+      "path": "registry/components/pdf/Stack.vue",
+      "content": "<script setup lang=\"ts\">\n  import type { Style } from '@formepdf/vue';\n  import { View } from '@formepdf/vue';\n  import { computed } from 'vue';\n  import { mergePdfStyles } from '@/lib/pdfcn/styles';\n  import { usePdfcnTheme } from '@/lib/pdfcn/theme';\n\n  export type StackGap = 'none' | 'sm' | 'md' | 'lg' | 'xl';\n\n  const props = withDefaults(\n    defineProps<{\n      gap?: StackGap;\n      direction?: 'vertical' | 'horizontal';\n      align?: 'start' | 'center' | 'end' | 'stretch';\n      justify?: 'start' | 'center' | 'end' | 'between' | 'around';\n      wrap?: boolean;\n      noWrap?: boolean;\n      style?: Style | undefined;\n    }>(),\n    { gap: 'md', direction: 'vertical' },\n  );\n\n  const theme = usePdfcnTheme();\n  const pdfStyle = computed<Style>(() => {\n    const spacing = theme.value.primitives.spacing;\n    const gaps = {\n      none: spacing[0],\n      sm: spacing[2],\n      md: spacing[4],\n      lg: spacing[6],\n      xl: spacing[8],\n    };\n    const alignment = {\n      start: 'flex-start',\n      center: 'center',\n      end: 'flex-end',\n      stretch: 'stretch',\n    } as const;\n    const justification = {\n      start: 'flex-start',\n      center: 'center',\n      end: 'flex-end',\n      between: 'space-between',\n      around: 'space-around',\n    } as const;\n\n    return mergePdfStyles(\n      {\n        flexDirection: props.direction === 'horizontal' ? 'row' : 'column',\n        gap: gaps[props.gap],\n        alignItems: props.align ? alignment[props.align] : undefined,\n        justifyContent: props.justify ? justification[props.justify] : undefined,\n        flexWrap: props.wrap ? 'wrap' : undefined,\n      },\n      props.style,\n    );\n  });\n</script>\n\n<template>\n  <View\n    :wrap=\"!noWrap\"\n    :style=\"pdfStyle\"\n    ><slot\n  /></View>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["component"]
+}

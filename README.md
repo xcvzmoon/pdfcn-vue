@@ -1,6 +1,6 @@
 # pdfcn-vue
 
-Vue components for building PDFs with Forme. The docs app is also the sample shadcn-vue consumer used to check the port as it grows.
+Vue components for building PDFs with Forme. The Nuxt website contains the documentation, live PDF demos, and theme builder.
 
 ## Install from the registry
 
@@ -22,7 +22,7 @@ Build the static registry payloads:
 vp run registry:build
 ```
 
-Full namespace, hosting, and item map: [docs/registry-distribution.md](./docs/registry-distribution.md).
+Full namespace, hosting, and item map: [Registry distribution](./apps/website/content/registry-distribution.md).
 
 ## Development
 
@@ -32,20 +32,20 @@ Install workspace dependencies:
 vp install
 ```
 
-Start the sample consumer:
+Start the website:
 
 ```bash
-vp -C apps/docs dev
+vp -C apps/website run dev
 ```
 
-Build the registry entrypoints and docs app:
+Build the registry entrypoints and Nuxt website:
 
 ```bash
 vp -C packages/registry run build
-vp -C apps/docs run build
+vp -C apps/website run build
 ```
 
-Run Vue typechecking for the docs app and registry package:
+Run Vue typechecking for the Nuxt website and registry package:
 
 ```bash
 vp run typecheck
@@ -57,7 +57,7 @@ Run the repository checks, including Vue typechecking and the Node PDF smoke tes
 vp run validate
 ```
 
-The docs app renders the same Vue document in the browser. It also contains the shadcn-vue setup used for registry install tests.
+The website renders Vue documents in the browser. Registry install tests use a separate temporary Vite consumer.
 
 ## Credits
 

@@ -1,0 +1,375 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-30T15:44:10.766393Z",
+  "title": "Design System: pdfcn-vue",
+  "extensions": {
+    "colorMeta": {
+      "background": {
+        "role": "neutral",
+        "displayName": "Night canvas",
+        "canonical": "#111113",
+        "tonalRamp": [
+          "oklch(15% 0.006 280)",
+          "oklch(26% 0.006 280)",
+          "oklch(37% 0.006 280)",
+          "oklch(48% 0.006 280)",
+          "oklch(59% 0.006 280)",
+          "oklch(70% 0.006 280)",
+          "oklch(82% 0.006 280)",
+          "oklch(95% 0.006 280)"
+        ]
+      },
+      "foreground": {
+        "role": "primary",
+        "displayName": "Paper white",
+        "canonical": "#f5f5f5",
+        "tonalRamp": [
+          "oklch(15% 0.006 280)",
+          "oklch(26% 0.006 280)",
+          "oklch(37% 0.006 280)",
+          "oklch(48% 0.006 280)",
+          "oklch(59% 0.006 280)",
+          "oklch(70% 0.006 280)",
+          "oklch(82% 0.006 280)",
+          "oklch(95% 0.006 280)"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Raised panel",
+        "canonical": "#1b1b1e",
+        "tonalRamp": [
+          "oklch(15% 0.006 280)",
+          "oklch(26% 0.006 280)",
+          "oklch(37% 0.006 280)",
+          "oklch(48% 0.006 280)",
+          "oklch(59% 0.006 280)",
+          "oklch(70% 0.006 280)",
+          "oklch(82% 0.006 280)",
+          "oklch(95% 0.006 280)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Inset surface",
+        "canonical": "#252529",
+        "tonalRamp": [
+          "oklch(15% 0.006 280)",
+          "oklch(26% 0.006 280)",
+          "oklch(37% 0.006 280)",
+          "oklch(48% 0.006 280)",
+          "oklch(59% 0.006 280)",
+          "oklch(70% 0.006 280)",
+          "oklch(82% 0.006 280)",
+          "oklch(95% 0.006 280)"
+        ]
+      },
+      "muted-foreground": {
+        "role": "neutral",
+        "displayName": "Secondary text",
+        "canonical": "#a3a3a3",
+        "tonalRamp": [
+          "oklch(15% 0.006 280)",
+          "oklch(26% 0.006 280)",
+          "oklch(37% 0.006 280)",
+          "oklch(48% 0.006 280)",
+          "oklch(59% 0.006 280)",
+          "oklch(70% 0.006 280)",
+          "oklch(82% 0.006 280)",
+          "oklch(95% 0.006 280)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Quiet rule",
+        "canonical": "#2b2b30",
+        "tonalRamp": [
+          "oklch(15% 0.006 280)",
+          "oklch(26% 0.006 280)",
+          "oklch(37% 0.006 280)",
+          "oklch(48% 0.006 280)",
+          "oklch(59% 0.006 280)",
+          "oklch(70% 0.006 280)",
+          "oklch(82% 0.006 280)",
+          "oklch(95% 0.006 280)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Neutral selection",
+        "canonical": "#303035",
+        "tonalRamp": [
+          "oklch(15% 0.006 280)",
+          "oklch(26% 0.006 280)",
+          "oklch(37% 0.006 280)",
+          "oklch(48% 0.006 280)",
+          "oklch(59% 0.006 280)",
+          "oklch(70% 0.006 280)",
+          "oklch(82% 0.006 280)",
+          "oklch(95% 0.006 280)"
+        ]
+      },
+      "light-background": {
+        "role": "neutral",
+        "displayName": "Light canvas",
+        "canonical": "#fafafa",
+        "tonalRamp": [
+          "oklch(15% 0.006 280)",
+          "oklch(26% 0.006 280)",
+          "oklch(37% 0.006 280)",
+          "oklch(48% 0.006 280)",
+          "oklch(59% 0.006 280)",
+          "oklch(70% 0.006 280)",
+          "oklch(82% 0.006 280)",
+          "oklch(95% 0.006 280)"
+        ]
+      },
+      "light-foreground": {
+        "role": "primary",
+        "displayName": "Light ink",
+        "canonical": "#171717",
+        "tonalRamp": [
+          "oklch(15% 0.006 280)",
+          "oklch(26% 0.006 280)",
+          "oklch(37% 0.006 280)",
+          "oklch(48% 0.006 280)",
+          "oklch(59% 0.006 280)",
+          "oklch(70% 0.006 280)",
+          "oklch(82% 0.006 280)",
+          "oklch(95% 0.006 280)"
+        ]
+      },
+      "light-card": {
+        "role": "neutral",
+        "displayName": "Light panel",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.006 280)",
+          "oklch(26% 0.006 280)",
+          "oklch(37% 0.006 280)",
+          "oklch(48% 0.006 280)",
+          "oklch(59% 0.006 280)",
+          "oklch(70% 0.006 280)",
+          "oklch(82% 0.006 280)",
+          "oklch(95% 0.006 280)"
+        ]
+      },
+      "light-muted": {
+        "role": "neutral",
+        "displayName": "Light inset",
+        "canonical": "#f5f5f5",
+        "tonalRamp": [
+          "oklch(15% 0.006 280)",
+          "oklch(26% 0.006 280)",
+          "oklch(37% 0.006 280)",
+          "oklch(48% 0.006 280)",
+          "oklch(59% 0.006 280)",
+          "oklch(70% 0.006 280)",
+          "oklch(82% 0.006 280)",
+          "oklch(95% 0.006 280)"
+        ]
+      },
+      "light-muted-foreground": {
+        "role": "neutral",
+        "displayName": "Light secondary text",
+        "canonical": "#737373",
+        "tonalRamp": [
+          "oklch(15% 0.006 280)",
+          "oklch(26% 0.006 280)",
+          "oklch(37% 0.006 280)",
+          "oklch(48% 0.006 280)",
+          "oklch(59% 0.006 280)",
+          "oklch(70% 0.006 280)",
+          "oklch(82% 0.006 280)",
+          "oklch(95% 0.006 280)"
+        ]
+      },
+      "light-border": {
+        "role": "neutral",
+        "displayName": "Light rule",
+        "canonical": "#e9e9ea",
+        "tonalRamp": [
+          "oklch(15% 0.006 280)",
+          "oklch(26% 0.006 280)",
+          "oklch(37% 0.006 280)",
+          "oklch(48% 0.006 280)",
+          "oklch(59% 0.006 280)",
+          "oklch(70% 0.006 280)",
+          "oklch(82% 0.006 280)",
+          "oklch(95% 0.006 280)"
+        ]
+      },
+      "light-accent": {
+        "role": "primary",
+        "displayName": "Light selection",
+        "canonical": "#e5e5e5",
+        "tonalRamp": [
+          "oklch(15% 0.006 280)",
+          "oklch(26% 0.006 280)",
+          "oklch(37% 0.006 280)",
+          "oklch(48% 0.006 280)",
+          "oklch(59% 0.006 280)",
+          "oklch(70% 0.006 280)",
+          "oklch(82% 0.006 280)",
+          "oklch(95% 0.006 280)"
+        ]
+      },
+      "destructive": {
+        "role": "tertiary",
+        "displayName": "Error red",
+        "canonical": "#bb382c",
+        "tonalRamp": [
+          "oklch(15% 0.15 25)",
+          "oklch(26% 0.15 25)",
+          "oklch(37% 0.15 25)",
+          "oklch(48% 0.15 25)",
+          "oklch(59% 0.15 25)",
+          "oklch(70% 0.15 25)",
+          "oklch(82% 0.15 25)",
+          "oklch(95% 0.15 25)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Three-line landing headline."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section and page headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Supporting copy and documentation."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Filenames, token values, shortcuts, and measurements."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "hero-reveal",
+        "value": "opacity 0\u21921, translateY(12px)\u21920, 300ms",
+        "purpose": "Short motion-v landing headline entry; travel is removed for reduced motion."
+      },
+      {
+        "name": "specimen-reveal",
+        "value": "opacity 0\u21921, 350ms, 120ms delay",
+        "purpose": "Short motion-v document frame entry."
+      },
+      {
+        "name": "state-color",
+        "value": "160ms ease",
+        "purpose": "Action link color transition."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1100px"
+      },
+      {
+        "name": "header-menu",
+        "value": "900px"
+      },
+      {
+        "name": "stack",
+        "value": "760px"
+      },
+      {
+        "name": "narrow",
+        "value": "400px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Filled shadcn-vue action for rendering or downloading a PDF.",
+      "html": "<button class=\"ds-button-primary\">Download PDF</button>",
+      "css": ".ds-button-primary{height:36px;padding:0 14px;border:1px solid transparent;border-radius:0;background:var(--foreground);color:var(--background);font:500 12px \"Geist Variable\",Arial,sans-serif;cursor:pointer;transition:background-color 160ms ease,opacity 160ms ease}.ds-button-primary:hover{opacity:.9}.ds-button-primary:focus-visible{outline:1px solid var(--foreground);outline-offset:2px}.ds-button-primary:active{opacity:.8}"
+    },
+    {
+      "name": "Outline button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action in a quiet bordered control.",
+      "html": "<button class=\"ds-button-outline\">Render again</button>",
+      "css": ".ds-button-outline{height:36px;padding:0 14px;border:1px solid var(--border);border-radius:0;background:transparent;color:var(--foreground);font:500 12px \"Geist Variable\",Arial,sans-serif;cursor:pointer;transition:background-color 160ms ease}.ds-button-outline:hover{background:var(--muted)}.ds-button-outline:focus-visible{outline:1px solid var(--foreground);outline-offset:2px}.ds-button-outline:active{background:var(--accent)}"
+    },
+    {
+      "name": "Installation action link",
+      "kind": "button",
+      "refersTo": "action-link-primary",
+      "description": "The larger landing action that leads to installation.",
+      "html": "<a class=\"ds-action-link\" href=\"#\">Read the installation guide \u2197</a>",
+      "css": ".ds-action-link{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;min-height:48px;padding:12px 20px;border:1px solid var(--foreground);border-radius:0;background:var(--foreground);color:var(--background);font:500 13px \"Geist Variable\",Arial,sans-serif;text-decoration:none;transition:background-color 160ms ease,color 160ms ease}.ds-action-link:hover{background:var(--accent);color:var(--foreground)}.ds-action-link:focus-visible{outline:1px solid var(--foreground);outline-offset:2px}.ds-action-link:active{opacity:.8}"
+    },
+    {
+      "name": "Text input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Square input for search and theme values.",
+      "html": "<input class=\"ds-input\" aria-label=\"Theme name\" placeholder=\"custom-theme\" />",
+      "css": ".ds-input{width:220px;height:32px;padding:4px 10px;border:1px solid var(--border);border-radius:0;background:transparent;color:var(--foreground);font:400 12px \"Geist Variable\",Arial,sans-serif;transition:border-color 160ms ease,box-shadow 160ms ease}.ds-input::placeholder{color:var(--muted-foreground)}.ds-input:hover{border-color:var(--muted-foreground)}.ds-input:focus-visible{border-color:var(--foreground);outline:none;box-shadow:0 0 0 2px var(--accent)}"
+    },
+    {
+      "name": "Documentation navigation",
+      "kind": "nav",
+      "description": "Selected docs link within the ruled sidebar.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Documentation\"><a href=\"#\">Introduction</a><a class=\"ds-selected\" href=\"#\" aria-current=\"page\">Installation</a><a href=\"#\">Rendering PDFs</a></nav>",
+      "css": ".ds-nav{display:grid;width:224px;padding-right:20px;border-right:1px solid var(--border);font:400 12px \"Geist Variable\",Arial,sans-serif}.ds-nav a{min-height:36px;padding:9px 14px;color:var(--foreground);text-decoration:none}.ds-nav a:hover,.ds-nav a:focus-visible{background:var(--muted)}.ds-nav a:focus-visible{outline:1px solid var(--foreground);outline-offset:-2px}.ds-nav a.ds-selected{background:var(--accent);font-weight:500}"
+    },
+    {
+      "name": "Code panel",
+      "kind": "card",
+      "refersTo": "code-panel",
+      "description": "A bordered source panel with a muted file bar and scrolling code.",
+      "html": "<div class=\"ds-code-panel\"><div class=\"ds-code-header\"><span>Invoice.vue</span><button>Copy</button></div><pre><code>&lt;InvoiceClassic :data=\"invoice\" /&gt;</code></pre></div>",
+      "css": ".ds-code-panel{width:420px;max-width:100%;overflow:hidden;border:1px solid var(--border);border-radius:0;background:var(--card);color:var(--foreground)}.ds-code-header{display:flex;align-items:center;justify-content:space-between;min-height:40px;padding:7px 14px;border-bottom:1px solid var(--border);background:var(--muted);color:var(--muted-foreground);font:400 11px \"Geist Variable\",Arial,sans-serif}.ds-code-header button{border:0;background:transparent;color:var(--foreground);font:inherit;cursor:pointer}.ds-code-header button:hover{text-decoration:underline}.ds-code-header button:focus-visible{outline:1px solid var(--foreground);outline-offset:2px}.ds-code-panel pre{overflow:auto;margin:0;padding:18px 20px;font:400 12px/1.7 SFMono-Regular,Consolas,monospace}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The industrial specimen sheet",
+    "overview": "The site presents Vue source and its rendered PDF as work to inspect. A dark neutral canvas, wide type, fine rules, and a document preview give it the feel of a technical sheet. The light mode keeps the same layout and swaps the surface values. Square shadcn-vue controls sit within the editorial layout.\n\nThe pages make room for code, document previews, installation steps, and theme controls. Copy names the action or result in plain developer language. Motion-v reveals are short and tied to entry; reduced motion removes travel.",
+    "keyCharacteristics": [
+      "Neutral dark default with a complete light counterpart.",
+      "Large Geist headings set against compact mono file names and measurements.",
+      "Square controls, quiet dividers, and gridded preview stages.",
+      "Real browser PDF previews and Vue source shown in the same visual frame."
+    ],
+    "rules": [
+      {
+        "name": "The neutral selection rule",
+        "body": "Use the theme's neutral accent for selection and hover; the site does not have a saturated brand highlight.",
+        "section": "colors"
+      },
+      {
+        "name": "The source-and-output rule",
+        "body": "Give Vue source, template names, and PDF output clear typographic roles so readers can compare them at a glance.",
+        "section": "typography"
+      },
+      {
+        "name": "The ruled-surface rule",
+        "body": "Separate working regions with a one-pixel neutral rule and tonal change before adding depth effects.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the dark neutral tokens as the default and keep light-mode roles paired.",
+      "Do use square controls and restrained one-pixel borders for site chrome.",
+      "Do keep PDF examples tied to the source and actual render state they describe.",
+      "Do write direct labels and documentation that tell developers what they can install, edit, or render."
+    ],
+    "donts": [
+      "Don't introduce a saturated accent into shared navigation or selection.",
+      "Don't use decorative motion in place of the short entry reveals and functional state changes already present.",
+      "Don't let the sample document's own colors or type become website tokens."
+    ]
+  }
+}

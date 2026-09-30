@@ -1,0 +1,18 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "watermark",
+  "type": "registry:component",
+  "title": "Watermark",
+  "description": "Diagonal or centered watermark text.",
+  "author": "pdfcn-vue",
+  "dependencies": ["@formepdf/vue@^0.25.0", "vue@^3.4.0"],
+  "registryDependencies": ["@pdfcn-vue/pdfcn-core"],
+  "files": [
+    {
+      "path": "registry/components/pdf/Watermark.vue",
+      "content": "<script setup lang=\"ts\">\n  import type { Style } from '@formepdf/vue';\n  import { Watermark as FormeWatermark } from '@formepdf/vue';\n  import { computed } from 'vue';\n  import { resolveColor } from '@/lib/pdfcn/resolve-color';\n  import { mergePdfStyles } from '@/lib/pdfcn/styles';\n  import { usePdfcnTheme } from '@/lib/pdfcn/theme';\n\n  const props = withDefaults(\n    defineProps<{\n      text: string;\n      opacity?: number | undefined;\n      fontSize?: number | undefined;\n      color?: string | undefined;\n      angle?: number | undefined;\n      style?: Style | undefined;\n    }>(),\n    { angle: -45, color: 'mutedForeground', fontSize: 60, opacity: 0.15 },\n  );\n\n  const theme = usePdfcnTheme();\n\n  function withOpacity(color: string, opacity: number): string {\n    const match = color.match(/^#([\\da-f]{2})([\\da-f]{2})([\\da-f]{2})$/i);\n    if (!match) return color;\n    const red = Number.parseInt(match[1] ?? '0', 16);\n    const green = Number.parseInt(match[2] ?? '0', 16);\n    const blue = Number.parseInt(match[3] ?? '0', 16);\n    return `rgba(${red}, ${green}, ${blue}, ${opacity})`;\n  }\n\n  const resolvedColor = computed(() =>\n    withOpacity(resolveColor(props.color, theme.value.colors), props.opacity),\n  );\n\n  const pdfStyle = computed(() => mergePdfStyles(props.style));\n</script>\n\n<template>\n  <FormeWatermark\n    :text=\"text\"\n    :angle=\"angle\"\n    :color=\"resolvedColor\"\n    :font-size=\"fontSize\"\n    :style=\"pdfStyle\"\n  />\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["chrome", "component"]
+}

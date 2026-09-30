@@ -76,7 +76,7 @@ test('serializes gift-certificate with sample data', async () => {
   expect(text).toContain('Gift Certificate');
   expect(text).toContain('Harbor Roasters');
   expect(text).toContain('$50.00');
-  expect(text).toContain('PDFCN-GC-2026-00891');
+  expect(text).toContain('PDFCN-VUE-GC-2026-00891');
   expect(text).toContain('Sarah');
 });
 

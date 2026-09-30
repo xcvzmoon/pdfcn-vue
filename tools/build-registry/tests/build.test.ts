@@ -85,3 +85,11 @@ test('data-table depends on table and blocks depend on their components', async 
   expect(invoice?.registryDependencies).toContain(`${registryBase}/block-shared.json`);
   expect(invoice?.registryDependencies).toContain(`${registryBase}/page-header.json`);
 });
+
+test('default registry dependencies resolve through the configured namespace', async () => {
+  const items = await buildRegistryItems(registrySrc);
+  const invoice = items.find(({ name }) => name === 'invoice-minimal');
+  expect(invoice?.registryDependencies).toContain('@pdfcn-vue/text');
+  expect(invoice?.registryDependencies).toContain('@pdfcn-vue/pdfcn-core');
+  expect(validateRegistryGraph(items)).toEqual([]);
+});

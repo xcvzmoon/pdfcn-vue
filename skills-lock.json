@@ -25,6 +25,18 @@
       "skillPath": ".agents/skills/debugging/SKILL.md",
       "computedHash": "67515a1c5460a50d6482f2425f18aafb303bbdb1edd0c36a2d236717b55789f1"
     },
+    "design-taste-frontend": {
+      "source": "leonxlnx/taste-skill",
+      "sourceType": "github",
+      "skillPath": "skills/taste-skill/SKILL.md",
+      "computedHash": "6d838b246d0e35d0b53f4f23f98ba7a1dd561937e64f7d0c7553b0928e376c3e"
+    },
+    "emil-design-eng": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/emil-design-eng/SKILL.md",
+      "computedHash": "51f2537e04d15911b41d78e2de24c36a0e26d41beae15e82a954fe5496a5eda9"
+    },
     "execute": {
       "source": "poteto/noodle",
       "sourceType": "github",
@@ -42,6 +54,12 @@
       "sourceType": "github",
       "skillPath": ".agents/skills/frontend-design/SKILL.md",
       "computedHash": "2f7e10f19f9c6e9776968405e5a1ffc49664c83244dbc256a2544b8412321472"
+    },
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/impeccable/SKILL.md",
+      "computedHash": "ab2e93b86777949d56ca8bb19530e6332e64e86d969127f7d1ab0a3ee7306702"
     },
     "interaction-design": {
       "source": "poteto/noodle",
@@ -198,6 +216,12 @@
       "sourceType": "github",
       "skillPath": ".agents/skills/worktree/SKILL.md",
       "computedHash": "e0f76c1a6808fb416ec1e993e6b528eaf574877ddb3e483a35a5d0a882dd9897"
+    },
+    "xcvzmoon-code-conventions": {
+      "source": "xcvzmoon/skills",
+      "sourceType": "github",
+      "skillPath": "xcvzmoon-code-conventions/SKILL.md",
+      "computedHash": "52848684eb93830967ea7fd5b3e04c467cc1d9c9de7d11cc6b965a71af0c3302"
     }
   }
 }

@@ -2,9 +2,9 @@
 
 Vue source for the pdfcn registry. The package exposes `@pdfcn-vue/registry` and `@pdfcn-vue/registry/forme` as built module entrypoints.
 
-Registry distribution is built from `src/registry.ts` (the item graph) by `tools/build-registry`. Output is `apps/docs/public/r/{name}.json` for the `@pdfcn-vue` namespace. See [docs/registry-distribution.md](../../docs/registry-distribution.md).
+Registry distribution is built from `src/registry.ts` (the item graph) by `tools/build-registry`. Output is `apps/website/public/r/{name}.json` for the `@pdfcn-vue` namespace. See [registry distribution](../../apps/website/content/registry-distribution.md).
 
-`src/forme/SmokeDocument.vue` is the Foundation render fixture. The docs app imports it through `@/registry/...`, while the Node smoke test loads the same SFC through Vite.
+`src/forme/SmokeDocument.vue` is the Foundation render fixture. The Nuxt website imports it through `@/registry/...`, while the Node smoke test loads the same SFC through Vite.
 
 ## PDF themes
 
@@ -14,9 +14,9 @@ Wrap a document with `PdfcnThemeProvider` to select a preset. Components below i
 
 ```vue
 <script setup lang="ts">
-import { forestTheme } from '@pdfcn-vue/registry';
-import { PdfcnThemeProvider } from '@pdfcn-vue/registry/forme';
-import ReportDocument from './ReportDocument.vue';
+  import { forestTheme } from '@pdfcn-vue/registry';
+  import { PdfcnThemeProvider } from '@pdfcn-vue/registry/forme';
+  import ReportDocument from './ReportDocument.vue';
 </script>
 
 <template>

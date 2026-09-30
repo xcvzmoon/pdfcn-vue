@@ -3,7 +3,7 @@ import type { GiftCertificateData } from './gift-certificate.types.ts';
 export const sampleGiftCertificateData: GiftCertificateData = {
   accentColor: '#0f766e',
   amount: 50,
-  certificateCode: 'PDFCN-GC-2026-00891',
+  certificateCode: 'PDFCN-VUE-GC-2026-00891',
   companyName: 'Harbor Roasters',
   companyContact: 'hello@harborroasters.com · (555) 246-8100',
   currency: 'USD',

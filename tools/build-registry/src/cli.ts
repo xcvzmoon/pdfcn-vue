@@ -7,7 +7,7 @@ const toolDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(toolDir, '../../..');
 
 const registrySrc = path.join(repoRoot, 'packages/registry/src');
-const outputDir = path.join(repoRoot, 'apps/docs/public/r');
+const outputDir = path.join(repoRoot, 'apps/website/public/r');
 const registryJsonPath = path.join(repoRoot, 'registry.json');
 
 const result = await buildRegistry(registrySrc, outputDir, registryJsonPath);
