@@ -17,7 +17,7 @@ const props = withDefaults(
     background?: string | undefined;
     border?: boolean;
     variant?: SectionVariant;
-    accentColor?: string;
+    accentColor?: string | undefined;
     noWrap?: boolean;
     style?: Style | undefined;
   }>(),
