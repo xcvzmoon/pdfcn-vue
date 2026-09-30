@@ -1,0 +1,23 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "card",
+  "type": "registry:component",
+  "title": "Card",
+  "description": "Bordered or muted content card.",
+  "author": "pdfcn-vue",
+  "dependencies": ["@formepdf/vue@^0.25.0", "vue@^3.4.0"],
+  "registryDependencies": ["https://pdfcn-vue.example.com/r/pdfcn-core.json"],
+  "files": [
+    {
+      "path": "registry/components/pdf/Card.vue",
+      "content": "<script setup lang=\"ts\">\nimport type { Style } from '@formepdf/vue';\nimport type { CardPadding, CardVariant } from '@/components/pdf/card.types';\nimport { Text, View } from '@formepdf/vue';\nimport { computed } from 'vue';\nimport { mergePdfStyles } from '@/lib/pdfcn/styles';\nimport { usePdfcnTheme } from '@/lib/pdfcn/theme';\n\nconst props = withDefaults(\n  defineProps<{\n    title?: string | undefined;\n    variant?: CardVariant;\n    padding?: CardPadding;\n    wrap?: boolean;\n    style?: Style | undefined;\n  }>(),\n  { padding: 'md', variant: 'default', wrap: false },\n);\n\nconst theme = usePdfcnTheme();\n\nconst cardStyle = computed<Style>(() => {\n  const current = theme.value;\n  const { spacing, borderRadius } = current.primitives;\n  const paddings = { sm: spacing[2], md: spacing[3], lg: spacing[4] };\n  return mergePdfStyles(\n    {\n      backgroundColor: props.variant === 'muted' ? current.colors.muted : current.colors.background,\n      borderColor: current.colors.border,\n      borderRadius: borderRadius.sm,\n      borderWidth: props.variant === 'bordered' ? 2 : 1,\n      marginBottom: current.spacing.componentGap,\n      padding: paddings[props.padding],\n    },\n    props.style,\n  );\n});\n\nconst titleStyle = computed<Style>(() => {\n  const current = theme.value;\n  const { spacing, fontWeights } = current.primitives;\n  return {\n    borderBottomColor: current.colors.border,\n    borderBottomWidth: 1,\n    color: current.colors.foreground,\n    fontFamily: current.typography.heading.fontFamily,\n    fontSize: current.primitives.typography.base,\n    fontWeight: fontWeights.semibold,\n    lineHeight: current.typography.heading.lineHeight,\n    marginBottom: spacing[2],\n    marginTop: 0,\n    paddingBottom: spacing[1] + 2,\n  };\n});\n</script>\n\n<template>\n  <View :wrap=\"wrap\" :style=\"cardStyle\">\n    <Text v-if=\"title\" :style=\"titleStyle\">{{ title }}</Text>\n    <slot />\n  </View>\n</template>\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "registry/components/pdf/card.types.ts",
+      "content": "export type CardVariant = 'default' | 'bordered' | 'muted';\nexport type CardPadding = 'sm' | 'md' | 'lg';\n",
+      "type": "registry:lib"
+    }
+  ],
+  "categories": ["component"]
+}

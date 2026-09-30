@@ -1,6 +1,8 @@
 # @pdfcn-vue/registry
 
-Vue source for the pdfcn registry. The package exposes `@pdfcn-vue/registry` and `@pdfcn-vue/registry/forme` as built module entrypoints. Registry item JSON and public hosting are later phases of the port, so the package remains private for now.
+Vue source for the pdfcn registry. The package exposes `@pdfcn-vue/registry` and `@pdfcn-vue/registry/forme` as built module entrypoints.
+
+Registry distribution is built from `src/registry.ts` (the item graph) by `tools/build-registry`. Output is `apps/docs/public/r/{name}.json` for the `@pdfcn-vue` namespace. See [docs/registry-distribution.md](../../docs/registry-distribution.md).
 
 `src/forme/SmokeDocument.vue` is the Foundation render fixture. The docs app imports it through `@/registry/...`, while the Node smoke test loads the same SFC through Vite.
 

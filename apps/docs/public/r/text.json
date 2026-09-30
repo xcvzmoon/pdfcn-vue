@@ -1,0 +1,18 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "text",
+  "type": "registry:component",
+  "title": "Text",
+  "description": "Body text with theme-aware typography and color.",
+  "author": "pdfcn-vue",
+  "dependencies": ["@formepdf/vue@^0.25.0", "vue@^3.4.0"],
+  "registryDependencies": ["https://pdfcn-vue.example.com/r/pdfcn-core.json"],
+  "files": [
+    {
+      "path": "registry/components/pdf/Text.vue",
+      "content": "<script setup lang=\"ts\">\nimport type { Style } from '@formepdf/vue';\nimport { Text as FormeText } from '@formepdf/vue';\nimport { computed } from 'vue';\nimport { resolveColor } from '@/lib/pdfcn/resolve-color';\nimport { mergePdfStyles } from '@/lib/pdfcn/styles';\nimport { usePdfcnTheme } from '@/lib/pdfcn/theme';\n\nexport type TextVariant = 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl';\nexport type TextWeight = 'normal' | 'medium' | 'semibold' | 'bold';\n\nconst props = withDefaults(\n  defineProps<{\n    variant?: TextVariant;\n    align?: 'left' | 'center' | 'right' | 'justify';\n    color?: string | undefined;\n    weight?: TextWeight;\n    italic?: boolean;\n    decoration?: 'underline' | 'line-through' | 'none';\n    transform?: 'uppercase' | 'lowercase' | 'capitalize';\n    noMargin?: boolean;\n    style?: Style | undefined;\n  }>(),\n  { weight: 'normal', decoration: 'none' },\n);\n\nconst theme = usePdfcnTheme();\nconst pdfStyle = computed<Style>(() => {\n  const current = theme.value;\n  return mergePdfStyles(\n    {\n      color: resolveColor(props.color ?? 'foreground', current.colors),\n      fontFamily: current.typography.body.fontFamily,\n      fontSize: props.variant\n        ? current.primitives.typography[props.variant]\n        : current.typography.body.fontSize,\n      fontWeight:\n        current.primitives.fontWeights[props.weight === 'normal' ? 'regular' : props.weight],\n      lineHeight: current.typography.body.lineHeight,\n      marginBottom: props.noMargin ? 0 : current.spacing.paragraphGap,\n      marginTop: 0,\n    },\n    {\n      textAlign: props.align,\n      fontStyle: props.italic ? 'italic' : undefined,\n      textDecoration: props.decoration,\n      textTransform: props.transform,\n      letterSpacing:\n        props.transform === 'uppercase' ? current.primitives.letterSpacing.wider * 10 : undefined,\n    },\n    props.style,\n  );\n});\n</script>\n\n<template>\n  <FormeText :style=\"pdfStyle\"><slot /></FormeText>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["component"]
+}

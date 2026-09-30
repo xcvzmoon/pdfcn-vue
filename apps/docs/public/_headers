@@ -1,0 +1,15 @@
+/*
+  Cloudflare Pages headers for the static registry.
+  The shadcn-vue CLI installs from Node and does not need CORS, but browser
+  clients (docs previews, “open in …” flows) do.
+*/
+
+/r/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, HEAD, OPTIONS
+  Access-Control-Allow-Headers: Content-Type
+  Cache-Control: public, max-age=300, must-revalidate
+
+/r/index.json
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=60, must-revalidate

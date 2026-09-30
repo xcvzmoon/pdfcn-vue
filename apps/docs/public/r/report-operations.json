@@ -1,0 +1,33 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "report-operations",
+  "type": "registry:block",
+  "title": "Report Operations",
+  "description": "The Report Operations document block with sample data.",
+  "author": "pdfcn-vue",
+  "dependencies": ["vue@^3.4.0"],
+  "registryDependencies": [
+    "https://pdfcn-vue.example.com/r/block-shared.json",
+    "https://pdfcn-vue.example.com/r/graph.json",
+    "https://pdfcn-vue.example.com/r/pdfcn-core.json",
+    "https://pdfcn-vue.example.com/r/theme-provider.json"
+  ],
+  "files": [
+    {
+      "path": "registry/components/pdf/blocks/report-operations/ReportOperations.vue",
+      "content": "<script setup lang=\"ts\">\nimport type { PdfcnTheme } from '@/lib/pdfcn/pdf-themes';\nimport type { GraphDataPoint } from '@/components/pdf/graph.types';\nimport type { ReportOperationsData } from '@/components/pdf/blocks/report-operations/report-operations.types';\nimport { computed } from 'vue';\nimport PdfcnThemeProvider from '@/components/pdf/PdfcnThemeProvider.vue';\nimport { usePdfcnTheme } from '@/lib/pdfcn/theme';\nimport ReportLayout from '@/components/pdf/blocks/shared/ReportLayout.vue';\nimport { sampleReportOperationsData } from '@/components/pdf/blocks/report-operations/report-operations.sample';\n\nconst props = defineProps<{\n  data?: ReportOperationsData | undefined;\n  theme?: PdfcnTheme | undefined;\n}>();\n\nconst report = computed(() => props.data ?? sampleReportOperationsData);\nconst fallbackTheme = usePdfcnTheme();\nconst resolvedTheme = computed(() => props.theme ?? fallbackTheme.value);\n\nconst graphColors = ['#2563EB'];\nconst graphData: GraphDataPoint[] = [\n  { label: 'Incident', value: 66 },\n  { label: 'Automation', value: 77 },\n  { label: 'L2 Support', value: 85 },\n  { label: 'L1 Support', value: 91 },\n];\n</script>\n\n<template>\n  <PdfcnThemeProvider :theme=\"resolvedTheme\">\n    <ReportLayout\n      :data=\"report\"\n      title-prefix=\"Operations Report\"\n      status-label=\"Ops: Watch\"\n      status-tone=\"warning\"\n      graph-variant=\"horizontal-bar\"\n      graph-title=\"Throughput by week\"\n      graph-subtitle=\"Resolved workload distribution\"\n      graph-legend=\"none\"\n      graph-show-values\n      :graph-colors=\"graphColors\"\n      :graph-data=\"graphData\"\n    />\n  </PdfcnThemeProvider>\n</template>\n",
+      "type": "registry:block"
+    },
+    {
+      "path": "registry/components/pdf/blocks/report-operations/report-operations.types.ts",
+      "content": "import type { BaseReportData } from '@/components/pdf/blocks/shared/report.types';\n\nexport type ReportOperationsData = BaseReportData;\n",
+      "type": "registry:lib"
+    },
+    {
+      "path": "registry/components/pdf/blocks/report-operations/report-operations.sample.ts",
+      "content": "import type { ReportOperationsData } from '@/components/pdf/blocks/report-operations/report-operations.types';\n\nexport const sampleReportOperationsData: ReportOperationsData = {\n  author: 'Delivery Office',\n  generatedAt: 'February 23, 2026',\n  highlights: [\n    'SLA improved after shift rebalancing and incident triage changes.',\n    'Backlog grew in week 4 due to release-related ticket surge.',\n    'Incident queue remediation plan has executive sponsorship and budget.',\n  ],\n  period: 'February 2026',\n  rows: [\n    {\n      label: 'L1 Support',\n      owner: 'N. Mehta',\n      progress: 91,\n      risk: 'Low',\n      status: 'On Track',\n    },\n    {\n      label: 'L2 Support',\n      owner: 'D. Chen',\n      progress: 85,\n      risk: 'Low',\n      status: 'On Track',\n    },\n    {\n      label: 'Incident Queue',\n      owner: 'R. Walker',\n      progress: 66,\n      risk: 'High',\n      status: 'At Risk',\n    },\n    {\n      label: 'Automation Rollout',\n      owner: 'M. Roy',\n      progress: 77,\n      risk: 'Medium',\n      status: 'On Track',\n    },\n  ],\n  series: [\n    { label: 'W1', value: 69 },\n    { label: 'W2', value: 71 },\n    { label: 'W3', value: 73 },\n    { label: 'W4', value: 74 },\n    { label: 'W5', value: 75 },\n    { label: 'W6', value: 76 },\n    { label: 'W7', value: 78 },\n    { label: 'W8', value: 79 },\n    { label: 'W9', value: 78 },\n    { label: 'W10', value: 80 },\n    { label: 'W11', value: 81 },\n    { label: 'W12', value: 83 },\n  ],\n  subtitle: 'Delivery throughput, SLA adherence, and backlog visibility',\n  summary: [\n    {\n      label: 'Tickets Closed',\n      tone: 'success',\n      trend: '+9.8% MoM',\n      value: '1,284',\n    },\n    {\n      label: 'SLA Hit Rate',\n      tone: 'success',\n      trend: '+1.4 pts',\n      value: '96.1%',\n    },\n    { label: 'Backlog', tone: 'warning', trend: '+6.0%', value: '214' },\n    { label: 'Escalations', tone: 'success', trend: '-18.5%', value: '17' },\n  ],\n  title: 'Monthly Operations Report',\n};\n",
+      "type": "registry:lib"
+    }
+  ],
+  "categories": ["block"]
+}

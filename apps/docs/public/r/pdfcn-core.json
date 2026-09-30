@@ -1,0 +1,44 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "pdfcn-core",
+  "type": "registry:lib",
+  "title": "pdfcn core",
+  "description": "Shared PDF theme types, color resolution, style helpers, and the default professional theme.",
+  "author": "pdfcn-vue",
+  "dependencies": ["@formepdf/vue@^0.25.0", "vue@^3.4.0"],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/lib/pdfcn/pdf-themes.ts",
+      "content": "export type TypographyScale = {\n  xs: number;\n  sm: number;\n  base: number;\n  lg: number;\n  xl: number;\n  '2xl': number;\n  '3xl': number;\n};\n\nexport type SpacingScale = {\n  0: number;\n  0.5: number;\n  1: number;\n  2: number;\n  3: number;\n  4: number;\n  5: number;\n  6: number;\n  8: number;\n  10: number;\n  12: number;\n  16: number;\n};\n\nexport type FontWeights = {\n  regular: number;\n  medium: number;\n  semibold: number;\n  bold: number;\n};\n\nexport type LineHeights = {\n  tight: number;\n  normal: number;\n  relaxed: number;\n};\n\nexport type BorderRadiusScale = {\n  none: number;\n  sm: number;\n  md: number;\n  lg: number;\n  full: number;\n};\n\nexport type LetterSpacingScale = {\n  tight: number;\n  normal: number;\n  wide: number;\n  wider: number;\n};\n\nexport type PrimitiveTokens = {\n  typography: TypographyScale;\n  spacing: SpacingScale;\n  fontWeights: FontWeights;\n  lineHeights: LineHeights;\n  borderRadius: BorderRadiusScale;\n  letterSpacing: LetterSpacingScale;\n};\n\nexport type ColorTokens = {\n  foreground: string;\n  background: string;\n  muted: string;\n  mutedForeground: string;\n  primary: string;\n  primaryForeground: string;\n  border: string;\n  accent: string;\n  destructive: string;\n  success: string;\n  warning: string;\n  info: string;\n};\n\nexport type TypographyTokens = {\n  body: {\n    fontFamily: string;\n    fontSize: number;\n    lineHeight: number;\n  };\n  heading: {\n    fontFamily: string;\n    fontWeight: number;\n    lineHeight: number;\n    fontSize: {\n      h1: number;\n      h2: number;\n      h3: number;\n      h4: number;\n      h5: number;\n      h6: number;\n    };\n  };\n};\n\nexport type SpacingTokens = {\n  page: {\n    marginTop: number;\n    marginRight: number;\n    marginBottom: number;\n    marginLeft: number;\n  };\n  sectionGap: number;\n  paragraphGap: number;\n  componentGap: number;\n};\n\nexport type PageTokens = {\n  size: 'A4' | 'LETTER' | 'LEGAL';\n  orientation: 'portrait' | 'landscape';\n};\n\nexport type PdfcnTheme = {\n  name: string;\n  primitives: PrimitiveTokens;\n  colors: ColorTokens;\n  typography: TypographyTokens;\n  spacing: SpacingTokens;\n  page: PageTokens;\n};\n",
+      "type": "registry:lib"
+    },
+    {
+      "path": "registry/lib/pdfcn/theme.ts",
+      "content": "import type { ComputedRef, InjectionKey } from 'vue';\nimport type { PdfcnTheme } from '@/lib/pdfcn/pdf-themes';\nimport { computed, inject } from 'vue';\nimport { professionalTheme } from '@/lib/pdfcn/themes/professional';\n\nexport const pdfcnThemeKey: InjectionKey<ComputedRef<PdfcnTheme>> = Symbol('pdfcn-theme');\n\nexport function usePdfcnTheme(): ComputedRef<PdfcnTheme> {\n  return inject(\n    pdfcnThemeKey,\n    computed(() => professionalTheme),\n  );\n}\n",
+      "type": "registry:lib"
+    },
+    {
+      "path": "registry/lib/pdfcn/resolve-color.ts",
+      "content": "import type { ColorTokens } from '@/lib/pdfcn/pdf-themes';\n\nexport const THEME_COLOR_KEYS = [\n  'foreground',\n  'background',\n  'muted',\n  'mutedForeground',\n  'primary',\n  'primaryForeground',\n  'border',\n  'accent',\n  'destructive',\n  'success',\n  'warning',\n  'info',\n] as const satisfies readonly (keyof ColorTokens)[];\n\nexport function resolveColor(value: string, colors: ColorTokens): string {\n  for (const key of THEME_COLOR_KEYS) {\n    if (value === key) return colors[key];\n  }\n\n  return value;\n}\n",
+      "type": "registry:lib"
+    },
+    {
+      "path": "registry/lib/pdfcn/styles.ts",
+      "content": "import type { Style } from '@formepdf/vue';\n\ntype PdfStyleInput = { [Key in keyof Style]?: Style[Key] | undefined };\n\nexport function mergePdfStyles(...styles: (PdfStyleInput | undefined)[]): Style {\n  const merged: Style = {};\n  for (const style of styles) {\n    if (style) Object.assign(merged, style);\n  }\n  return merged;\n}\n",
+      "type": "registry:lib"
+    },
+    {
+      "path": "registry/lib/pdfcn/themes/primitives.ts",
+      "content": "import type { PrimitiveTokens } from '@/lib/pdfcn/pdf-themes';\n\nexport const defaultPrimitives = {\n  borderRadius: {\n    full: 9999,\n    lg: 8,\n    md: 4,\n    none: 0,\n    sm: 2,\n  },\n  fontWeights: {\n    bold: 700,\n    medium: 500,\n    regular: 400,\n    semibold: 600,\n  },\n  letterSpacing: {\n    normal: 0,\n    tight: -0.025,\n    wide: 0.025,\n    wider: 0.05,\n  },\n  lineHeights: {\n    normal: 1.4,\n    relaxed: 1.6,\n    tight: 1.2,\n  },\n  spacing: {\n    0: 0,\n    0.5: 2,\n    1: 4,\n    10: 40,\n    12: 48,\n    16: 64,\n    2: 8,\n    3: 12,\n    4: 16,\n    5: 20,\n    6: 24,\n    8: 32,\n  },\n  typography: {\n    '2xl': 28,\n    '3xl': 36,\n    base: 15,\n    lg: 18,\n    sm: 12,\n    xl: 22,\n    xs: 10,\n  },\n} satisfies PrimitiveTokens;\n",
+      "type": "registry:lib"
+    },
+    {
+      "path": "registry/lib/pdfcn/themes/professional.ts",
+      "content": "import type { PdfcnTheme } from '@/lib/pdfcn/pdf-themes';\nimport { defaultPrimitives } from '@/lib/pdfcn/themes/primitives';\n\nexport const professionalTheme = {\n  colors: {\n    accent: '#3b82f6',\n    background: '#ffffff',\n    border: '#e4e4e7',\n    destructive: '#dc2626',\n    foreground: '#18181b',\n    info: '#0ea5e9',\n    muted: '#f4f4f5',\n    mutedForeground: '#71717a',\n    primary: '#18181b',\n    primaryForeground: '#ffffff',\n    success: '#16a34a',\n    warning: '#d97706',\n  },\n  name: 'professional',\n  page: {\n    orientation: 'portrait',\n    size: 'A4',\n  },\n  primitives: defaultPrimitives,\n  spacing: {\n    componentGap: 14,\n    page: {\n      marginBottom: 56,\n      marginLeft: 48,\n      marginRight: 48,\n      marginTop: 56,\n    },\n    paragraphGap: 10,\n    sectionGap: 28,\n  },\n  typography: {\n    body: {\n      fontFamily: 'Helvetica',\n      fontSize: 11,\n      lineHeight: 1.6,\n    },\n    heading: {\n      fontFamily: 'Times-Roman',\n      fontSize: {\n        h1: 32,\n        h2: 24,\n        h3: 20,\n        h4: 16,\n        h5: 14,\n        h6: 12,\n      },\n      fontWeight: 700,\n      lineHeight: 1.25,\n    },\n  },\n} satisfies PdfcnTheme;\n",
+      "type": "registry:lib"
+    }
+  ],
+  "categories": ["lib", "theme"],
+  "docs": "Install this first. Every pdfcn component resolves theme tokens through it."
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "stack",
+  "type": "registry:component",
+  "title": "Stack",
+  "description": "Vertical or horizontal stack layout primitive.",
+  "author": "pdfcn-vue",
+  "dependencies": ["@formepdf/vue@^0.25.0", "vue@^3.4.0"],
+  "registryDependencies": ["https://pdfcn-vue.example.com/r/pdfcn-core.json"],
+  "files": [
+    {
+      "path": "registry/components/pdf/Stack.vue",
+      "content": "<script setup lang=\"ts\">\nimport type { Style } from '@formepdf/vue';\nimport { View } from '@formepdf/vue';\nimport { computed } from 'vue';\nimport { mergePdfStyles } from '@/lib/pdfcn/styles';\nimport { usePdfcnTheme } from '@/lib/pdfcn/theme';\n\nexport type StackGap = 'none' | 'sm' | 'md' | 'lg' | 'xl';\n\nconst props = withDefaults(\n  defineProps<{\n    gap?: StackGap;\n    direction?: 'vertical' | 'horizontal';\n    align?: 'start' | 'center' | 'end' | 'stretch';\n    justify?: 'start' | 'center' | 'end' | 'between' | 'around';\n    wrap?: boolean;\n    noWrap?: boolean;\n    style?: Style | undefined;\n  }>(),\n  { gap: 'md', direction: 'vertical' },\n);\n\nconst theme = usePdfcnTheme();\nconst pdfStyle = computed<Style>(() => {\n  const spacing = theme.value.primitives.spacing;\n  const gaps = { none: spacing[0], sm: spacing[2], md: spacing[4], lg: spacing[6], xl: spacing[8] };\n  const alignment = {\n    start: 'flex-start',\n    center: 'center',\n    end: 'flex-end',\n    stretch: 'stretch',\n  } as const;\n  const justification = {\n    start: 'flex-start',\n    center: 'center',\n    end: 'flex-end',\n    between: 'space-between',\n    around: 'space-around',\n  } as const;\n\n  return mergePdfStyles(\n    {\n      flexDirection: props.direction === 'horizontal' ? 'row' : 'column',\n      gap: gaps[props.gap],\n      alignItems: props.align ? alignment[props.align] : undefined,\n      justifyContent: props.justify ? justification[props.justify] : undefined,\n      flexWrap: props.wrap ? 'wrap' : undefined,\n    },\n    props.style,\n  );\n});\n</script>\n\n<template>\n  <View :wrap=\"!noWrap\" :style=\"pdfStyle\"><slot /></View>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["component"]
+}
