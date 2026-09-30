@@ -1,206 +1,206 @@
 <script setup lang="ts">
-import type { Style } from '@formepdf/vue';
-import type { PdfcnTheme } from '../../../types/pdf-themes.ts';
-import type {
-  EventAgendaDaySchedule,
-  EventAgendaProps,
-  EventAgendaSession,
-} from './event-agenda.types.ts';
-import { Document, PAGE_NUMBER, Page, TOTAL_PAGES, View } from '@formepdf/vue';
-import { computed } from 'vue';
-import PdfcnThemeProvider from '../../components/PdfcnThemeProvider.vue';
-import Section from '../../components/Section.vue';
-import Text from '../../components/Text.vue';
-import { resolveColor } from '../../lib/resolve-color.ts';
-import { usePdfcnTheme } from '../../lib/theme.ts';
-import AgendaSession from './AgendaSession.vue';
-import { sampleEventAgendaData } from './event-agenda.sample.ts';
+  import type { Style } from '@formepdf/vue';
+  import type { PdfcnTheme } from '../../../types/pdf-themes.ts';
+  import type {
+    EventAgendaDaySchedule,
+    EventAgendaProps,
+    EventAgendaSession,
+  } from './event-agenda.types.ts';
+  import { Document, PAGE_NUMBER, Page, TOTAL_PAGES, View } from '@formepdf/vue';
+  import { computed } from 'vue';
+  import PdfcnThemeProvider from '../../components/PdfcnThemeProvider.vue';
+  import Section from '../../components/Section.vue';
+  import Text from '../../components/Text.vue';
+  import { resolveColor } from '../../lib/resolve-color.ts';
+  import { usePdfcnTheme } from '../../lib/theme.ts';
+  import AgendaSession from './AgendaSession.vue';
+  import { sampleEventAgendaData } from './event-agenda.sample.ts';
 
-const props = defineProps<{
-  data?: EventAgendaProps | undefined;
-  theme?: PdfcnTheme | undefined;
-}>();
+  const props = defineProps<{
+    data?: EventAgendaProps | undefined;
+    theme?: PdfcnTheme | undefined;
+  }>();
 
-const agenda = computed(() => props.data ?? sampleEventAgendaData);
-const fallbackTheme = usePdfcnTheme();
-const activeTheme = computed(() => props.theme ?? fallbackTheme.value);
+  const agenda = computed(() => props.data ?? sampleEventAgendaData);
+  const fallbackTheme = usePdfcnTheme();
+  const activeTheme = computed(() => props.theme ?? fallbackTheme.value);
 
-type TimeSlotGroup = {
-  sessions: EventAgendaSession[];
-  time: string;
-};
-
-function groupSessionsByTime(sessions: EventAgendaSession[]): TimeSlotGroup[] {
-  const groups: TimeSlotGroup[] = [];
-  const map = new Map<string, EventAgendaSession[]>();
-
-  for (const session of sessions) {
-    const existing = map.get(session.time);
-    if (existing) {
-      existing.push(session);
-    } else {
-      const list = [session];
-      map.set(session.time, list);
-      groups.push({ sessions: list, time: session.time });
-    }
-  }
-
-  return groups;
-}
-
-function trackColorMap(): Map<string, string> {
-  const map = new Map<string, string>();
-  const tracks = agenda.value.tracks;
-  if (tracks) {
-    for (const track of tracks) {
-      map.set(track.name.toLowerCase(), track.color);
-    }
-  }
-  return map;
-}
-
-const accent = computed(() => {
-  const current = activeTheme.value;
-  return resolveColor(agenda.value.accentColor ?? current.colors.primary, current.colors);
-});
-
-const styles = computed(() => {
-  const current = activeTheme.value;
-  return {
-    breakBadge: {
-      backgroundColor: current.colors.muted,
-      borderColor: current.colors.border,
-      borderRadius: 4,
-      borderWidth: 1,
-      paddingHorizontal: 6,
-      paddingVertical: 2,
-    } satisfies Style,
-    breakCard: {
-      backgroundColor: current.colors.muted,
-      borderColor: current.colors.border,
-      borderRadius: 6,
-      borderWidth: 1,
-      flex: 1,
-      paddingHorizontal: 10,
-      paddingVertical: 7,
-    } satisfies Style,
-    dayBanner: {
-      alignItems: 'center',
-      backgroundColor: current.colors.muted,
-      borderColor: current.colors.border,
-      borderRadius: 6,
-      borderWidth: 1,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginBottom: 10,
-      marginTop: 8,
-      paddingHorizontal: 12,
-      paddingVertical: 6,
-    } satisfies Style,
-    dayMeta: {
-      alignItems: 'center',
-      flexDirection: 'row',
-      gap: 6,
-    } satisfies Style,
-    footerContainer: {
-      borderTopColor: current.colors.border,
-      borderTopWidth: 1,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginTop: 'auto',
-      paddingTop: 8,
-    } satisfies Style,
-    headerBadge: {
-      backgroundColor: accent.value,
-      borderRadius: 4,
-      paddingHorizontal: 10,
-      paddingVertical: 4,
-    } satisfies Style,
-    headerContainer: {
-      borderBottomColor: current.colors.border,
-      borderBottomWidth: 1.5,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      paddingBottom: 10,
-    } satisfies Style,
-    headerText: {
-      flex: 1,
-      paddingRight: 16,
-    } satisfies Style,
-    kicker: {
-      color: accent.value,
-      fontSize: 8.5,
-      fontWeight: 700,
-      letterSpacing: 1.2,
-      marginBottom: 2,
-      textTransform: 'uppercase',
-    } satisfies Style,
-    legendContainer: {
-      alignItems: 'center',
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      gap: 6,
-      marginBottom: 8,
-    } satisfies Style,
-    legendDot: {
-      borderRadius: 3,
-      height: 7,
-      marginRight: 4,
-      width: 7,
-    } satisfies Style,
-    legendItem: {
-      alignItems: 'center',
-      backgroundColor: current.colors.muted,
-      borderColor: current.colors.border,
-      borderRadius: 4,
-      borderWidth: 1,
-      flexDirection: 'row',
-      paddingHorizontal: 6,
-      paddingVertical: 2,
-    } satisfies Style,
-    pageContent: {
-      backgroundColor: current.colors.background,
-      flex: 1,
-    } satisfies Style,
-    sessionsRow: {
-      flex: 1,
-      flexDirection: 'row',
-      gap: 8,
-    } satisfies Style,
-    timeBox: {
-      alignItems: 'flex-start',
-      flexDirection: 'column',
-      paddingTop: 2,
-      width: 78,
-    } satisfies Style,
-    timeSlotRow: {
-      flexDirection: 'row',
-      marginBottom: 8,
-    } satisfies Style,
+  type TimeSlotGroup = {
+    sessions: EventAgendaSession[];
+    time: string;
   };
-});
 
-const trackColors = computed(() => trackColorMap());
+  function groupSessionsByTime(sessions: EventAgendaSession[]): TimeSlotGroup[] {
+    const groups: TimeSlotGroup[] = [];
+    const map = new Map<string, EventAgendaSession[]>();
 
-function isSingleBreak(slot: TimeSlotGroup): boolean {
-  return slot.sessions.length === 1 && slot.sessions[0]?.isBreak === true;
-}
+    for (const session of sessions) {
+      const existing = map.get(session.time);
+      if (existing) {
+        existing.push(session);
+      } else {
+        const list = [session];
+        map.set(session.time, list);
+        groups.push({ sessions: list, time: session.time });
+      }
+    }
 
-function trackColorFor(session: EventAgendaSession): string | undefined {
-  if (!session.track) return undefined;
-  return trackColors.value.get(session.track.toLowerCase());
-}
+    return groups;
+  }
 
-function daySlots(day: EventAgendaDaySchedule): TimeSlotGroup[] {
-  return groupSessionsByTime(day.sessions);
-}
+  function trackColorMap(): Map<string, string> {
+    const map = new Map<string, string>();
+    const tracks = agenda.value.tracks;
+    if (tracks) {
+      for (const track of tracks) {
+        map.set(track.name.toLowerCase(), track.color);
+      }
+    }
+    return map;
+  }
 
-const documentTitle = computed(() => `${agenda.value.eventName} - Agenda`);
-const dateLine = computed(() => {
-  const data = agenda.value;
-  const range = data.endDate ? `${data.date} – ${data.endDate}` : data.date;
-  return `${range} • ${data.venue}`;
-});
+  const accent = computed(() => {
+    const current = activeTheme.value;
+    return resolveColor(agenda.value.accentColor ?? current.colors.primary, current.colors);
+  });
+
+  const styles = computed(() => {
+    const current = activeTheme.value;
+    return {
+      breakBadge: {
+        backgroundColor: current.colors.muted,
+        borderColor: current.colors.border,
+        borderRadius: 4,
+        borderWidth: 1,
+        paddingHorizontal: 6,
+        paddingVertical: 2,
+      } satisfies Style,
+      breakCard: {
+        backgroundColor: current.colors.muted,
+        borderColor: current.colors.border,
+        borderRadius: 6,
+        borderWidth: 1,
+        flex: 1,
+        paddingHorizontal: 10,
+        paddingVertical: 7,
+      } satisfies Style,
+      dayBanner: {
+        alignItems: 'center',
+        backgroundColor: current.colors.muted,
+        borderColor: current.colors.border,
+        borderRadius: 6,
+        borderWidth: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: 10,
+        marginTop: 8,
+        paddingHorizontal: 12,
+        paddingVertical: 6,
+      } satisfies Style,
+      dayMeta: {
+        alignItems: 'center',
+        flexDirection: 'row',
+        gap: 6,
+      } satisfies Style,
+      footerContainer: {
+        borderTopColor: current.colors.border,
+        borderTopWidth: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 'auto',
+        paddingTop: 8,
+      } satisfies Style,
+      headerBadge: {
+        backgroundColor: accent.value,
+        borderRadius: 4,
+        paddingHorizontal: 10,
+        paddingVertical: 4,
+      } satisfies Style,
+      headerContainer: {
+        borderBottomColor: current.colors.border,
+        borderBottomWidth: 1.5,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingBottom: 10,
+      } satisfies Style,
+      headerText: {
+        flex: 1,
+        paddingRight: 16,
+      } satisfies Style,
+      kicker: {
+        color: accent.value,
+        fontSize: 8.5,
+        fontWeight: 700,
+        letterSpacing: 1.2,
+        marginBottom: 2,
+        textTransform: 'uppercase',
+      } satisfies Style,
+      legendContainer: {
+        alignItems: 'center',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        gap: 6,
+        marginBottom: 8,
+      } satisfies Style,
+      legendDot: {
+        borderRadius: 3,
+        height: 7,
+        marginRight: 4,
+        width: 7,
+      } satisfies Style,
+      legendItem: {
+        alignItems: 'center',
+        backgroundColor: current.colors.muted,
+        borderColor: current.colors.border,
+        borderRadius: 4,
+        borderWidth: 1,
+        flexDirection: 'row',
+        paddingHorizontal: 6,
+        paddingVertical: 2,
+      } satisfies Style,
+      pageContent: {
+        backgroundColor: current.colors.background,
+        flex: 1,
+      } satisfies Style,
+      sessionsRow: {
+        flex: 1,
+        flexDirection: 'row',
+        gap: 8,
+      } satisfies Style,
+      timeBox: {
+        alignItems: 'flex-start',
+        flexDirection: 'column',
+        paddingTop: 2,
+        width: 78,
+      } satisfies Style,
+      timeSlotRow: {
+        flexDirection: 'row',
+        marginBottom: 8,
+      } satisfies Style,
+    };
+  });
+
+  const trackColors = computed(() => trackColorMap());
+
+  function isSingleBreak(slot: TimeSlotGroup): boolean {
+    return slot.sessions.length === 1 && slot.sessions[0]?.isBreak === true;
+  }
+
+  function trackColorFor(session: EventAgendaSession): string | undefined {
+    if (!session.track) return undefined;
+    return trackColors.value.get(session.track.toLowerCase());
+  }
+
+  function daySlots(day: EventAgendaDaySchedule): TimeSlotGroup[] {
+    return groupSessionsByTime(day.sessions);
+  }
+
+  const documentTitle = computed(() => `${agenda.value.eventName} - Agenda`);
+  const dateLine = computed(() => {
+    const data = agenda.value;
+    const range = data.endDate ? `${data.date} – ${data.endDate}` : data.date;
+    return `${range} • ${data.venue}`;
+  });
 </script>
 
 <template>
@@ -215,7 +215,11 @@ const dateLine = computed(() => {
         <View :style="styles.pageContent">
           <View :style="styles.headerContainer">
             <View :style="styles.headerText">
-              <Text no-margin :style="styles.kicker">Event Agenda</Text>
+              <Text
+                no-margin
+                :style="styles.kicker"
+                >Event Agenda</Text
+              >
               <Text
                 no-margin
                 :style="{
@@ -258,8 +262,15 @@ const dateLine = computed(() => {
 
           <View :style="styles.dayBanner">
             <View :style="styles.dayMeta">
-              <Text no-margin :style="{ fontSize: 11, fontWeight: 700 }">{{ day.label }}</Text>
-              <Text no-margin :style="{ color: activeTheme.colors.mutedForeground, fontSize: 9 }">
+              <Text
+                no-margin
+                :style="{ fontSize: 11, fontWeight: 700 }"
+                >{{ day.label }}</Text
+              >
+              <Text
+                no-margin
+                :style="{ color: activeTheme.colors.mutedForeground, fontSize: 9 }"
+              >
                 {{ `— ${day.date}` }}
               </Text>
             </View>
@@ -276,7 +287,10 @@ const dateLine = computed(() => {
             </Text>
           </View>
 
-          <View v-if="agenda.tracks && agenda.tracks.length > 0" :style="styles.legendContainer">
+          <View
+            v-if="agenda.tracks && agenda.tracks.length > 0"
+            :style="styles.legendContainer"
+          >
             <Text
               no-margin
               :style="{
@@ -290,16 +304,27 @@ const dateLine = computed(() => {
             >
               Tracks:
             </Text>
-            <View v-for="track in agenda.tracks" :key="track.name" :style="styles.legendItem">
+            <View
+              v-for="track in agenda.tracks"
+              :key="track.name"
+              :style="styles.legendItem"
+            >
               <View :style="[styles.legendDot, { backgroundColor: track.color }]" />
-              <Text no-margin :style="{ fontSize: 7.5, fontWeight: 600 }">
+              <Text
+                no-margin
+                :style="{ fontSize: 7.5, fontWeight: 600 }"
+              >
                 {{ track.name }}
               </Text>
             </View>
           </View>
 
           <Section :style="{ marginTop: 2 }">
-            <View v-for="slot in daySlots(day)" :key="slot.time" :style="styles.timeSlotRow">
+            <View
+              v-for="slot in daySlots(day)"
+              :key="slot.time"
+              :style="styles.timeSlotRow"
+            >
               <View :style="styles.timeBox">
                 <Text
                   no-margin
@@ -323,7 +348,10 @@ const dateLine = computed(() => {
                 </Text>
               </View>
 
-              <View v-if="isSingleBreak(slot)" :style="styles.breakCard">
+              <View
+                v-if="isSingleBreak(slot)"
+                :style="styles.breakCard"
+              >
                 <View
                   :style="{
                     alignItems: 'center',
@@ -369,7 +397,10 @@ const dateLine = computed(() => {
                 </Text>
               </View>
 
-              <View v-else :style="styles.sessionsRow">
+              <View
+                v-else
+                :style="styles.sessionsRow"
+              >
                 <AgendaSession
                   v-for="(session, sessionIndex) in slot.sessions"
                   :key="`${session.title}-${sessionIndex}`"

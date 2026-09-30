@@ -7,10 +7,10 @@ export const sampleInvoiceConsultantData: InvoiceConsultantData = {
     email: 'sarah.johnson@acmetech.com',
     name: 'Sarah Johnson',
   },
-  companyAddress: 'Nagpur, IN · hello@pdfcn.app',
-  companyName: 'pdfcn',
+  companyAddress: 'Nagpur, IN · hello@pdfcn-vue.app',
+  companyName: 'pdfcn-vue',
   consultant: {
-    email: 'john.smith@pdfcn.app',
+    email: 'john.smith@pdfcn-vue.app',
     name: 'John Smith',
     title: 'Senior Technical Consultant',
   },

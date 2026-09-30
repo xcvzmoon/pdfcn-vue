@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import type { PdfcnTheme } from '../../../types/pdf-themes.ts';
-import type { ReportMarketingData } from './report-marketing.types.ts';
-import { computed } from 'vue';
-import PdfcnThemeProvider from '../../components/PdfcnThemeProvider.vue';
-import { usePdfcnTheme } from '../../lib/theme.ts';
-import ReportLayout from '../shared/ReportLayout.vue';
-import { sampleReportMarketingData } from './report-marketing.sample.ts';
+  import type { PdfcnTheme } from '../../../types/pdf-themes.ts';
+  import type { ReportMarketingData } from './report-marketing.types.ts';
+  import { computed } from 'vue';
+  import PdfcnThemeProvider from '../../components/PdfcnThemeProvider.vue';
+  import { usePdfcnTheme } from '../../lib/theme.ts';
+  import ReportLayout from '../shared/ReportLayout.vue';
+  import { sampleReportMarketingData } from './report-marketing.sample.ts';
 
-const props = defineProps<{
-  data?: ReportMarketingData | undefined;
-  theme?: PdfcnTheme | undefined;
-}>();
+  const props = defineProps<{
+    data?: ReportMarketingData | undefined;
+    theme?: PdfcnTheme | undefined;
+  }>();
 
-const report = computed(() => props.data ?? sampleReportMarketingData);
-const fallbackTheme = usePdfcnTheme();
-const resolvedTheme = computed(() => props.theme ?? fallbackTheme.value);
+  const report = computed(() => props.data ?? sampleReportMarketingData);
+  const fallbackTheme = usePdfcnTheme();
+  const resolvedTheme = computed(() => props.theme ?? fallbackTheme.value);
 
-const graphColors = ['#0EA5E9'];
+  const graphColors = ['#0EA5E9'];
 </script>
 
 <template>

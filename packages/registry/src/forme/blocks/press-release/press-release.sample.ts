@@ -4,8 +4,8 @@ export const samplePressReleaseData: PressReleaseProps = {
   accentColor: '#1e40af',
   address: '123 Market St, San Francisco, CA 94103',
   body: [
-    'Acme Corp today announced the launch of pdfcn, an open-source component library for generating professional PDF documents.',
-    'pdfcn is designed to work seamlessly with shadcn/ui and follows the same registry-based distribution model, letting developers add print-ready document blocks with a single CLI command.',
+    'Acme Corp today announced the launch of pdfcn-vue, an open-source component library for generating professional PDF documents.',
+    'pdfcn-vue is designed to work seamlessly with shadcn/ui and follows the same registry-based distribution model, letting developers add print-ready document blocks with a single CLI command.',
     'The initial release ships with invoice, report, event, and education blocks, with more templates arriving monthly.',
   ],
   boilerplate:
@@ -23,7 +23,7 @@ export const samplePressReleaseData: PressReleaseProps = {
   quotes: [
     {
       author: 'Jane Doe',
-      text: 'We built pdfcn because generating PDFs was unnecessarily painful. Now it feels like writing any other component.',
+      text: 'We built pdfcn-vue because generating PDFs was unnecessarily painful. Now it feels like writing any other component.',
       title: 'CTO, Acme Corp',
     },
     {
