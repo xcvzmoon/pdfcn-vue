@@ -93,7 +93,7 @@ function blockItem(
 export const registryCatalog: RegistryCatalog = {
   $schema: REGISTRY_SCHEMA_URL,
   name: 'pdfcn-vue',
-  homepage: 'https://github.com/shadcn-labs/pdfcn',
+  homepage: 'https://github.com/xcvzmoon/pdfcn-vue',
   items: [
     {
       name: 'pdfcn-core',
