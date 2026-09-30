@@ -1,0 +1,18 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "theme-provider",
+  "type": "registry:component",
+  "title": "PdfcnThemeProvider",
+  "description": "Provide a PdfcnTheme to all pdfcn components under the provider.",
+  "author": "pdfcn-vue",
+  "dependencies": ["vue@^3.4.0"],
+  "registryDependencies": ["https://pdfcn-vue.example.com/r/pdfcn-core.json"],
+  "files": [
+    {
+      "path": "registry/components/pdf/PdfcnThemeProvider.vue",
+      "content": "<script setup lang=\"ts\">\nimport type { PdfcnTheme } from '@/lib/pdfcn/pdf-themes';\nimport { computed, provide } from 'vue';\nimport { professionalTheme } from '@/lib/pdfcn/themes/professional';\nimport { pdfcnThemeKey } from '@/lib/pdfcn/theme';\n\nconst props = defineProps<{\n  theme?: PdfcnTheme | undefined;\n}>();\n\nprovide(\n  pdfcnThemeKey,\n  computed(() => props.theme ?? professionalTheme),\n);\n</script>\n\n<template>\n  <slot />\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["theme", "component"]
+}

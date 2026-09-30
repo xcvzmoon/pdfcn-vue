@@ -1,0 +1,18 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "theme-elegant",
+  "type": "registry:lib",
+  "title": "Elegant theme",
+  "description": "The elegant PdfcnTheme preset.",
+  "author": "pdfcn-vue",
+  "dependencies": [],
+  "registryDependencies": ["https://pdfcn-vue.example.com/r/pdfcn-core.json"],
+  "files": [
+    {
+      "path": "registry/lib/pdfcn/themes/elegant.ts",
+      "content": "import type { PdfcnTheme } from '@/lib/pdfcn/pdf-themes';\nimport { defaultPrimitives } from '@/lib/pdfcn/themes/primitives';\n\nexport const elegantTheme = {\n  colors: {\n    accent: '#b45309',\n    background: '#ffffff',\n    border: '#d6d3d1',\n    destructive: '#dc2626',\n    foreground: '#1c1917',\n    info: '#0ea5e9',\n    muted: '#fafaf9',\n    mutedForeground: '#78716c',\n    primary: '#78350f',\n    primaryForeground: '#fffbeb',\n    success: '#16a34a',\n    warning: '#d97706',\n  },\n  name: 'elegant',\n  page: {\n    orientation: 'portrait',\n    size: 'A4',\n  },\n  primitives: defaultPrimitives,\n  spacing: {\n    componentGap: 16,\n    page: {\n      marginBottom: 60,\n      marginLeft: 52,\n      marginRight: 52,\n      marginTop: 60,\n    },\n    paragraphGap: 12,\n    sectionGap: 30,\n  },\n  typography: {\n    body: {\n      fontFamily: 'Lora',\n      fontSize: 11,\n      lineHeight: 1.7,\n    },\n    heading: {\n      fontFamily: 'Playfair Display',\n      fontSize: {\n        h1: 36,\n        h2: 26,\n        h3: 20,\n        h4: 16,\n        h5: 14,\n        h6: 12,\n      },\n      fontWeight: 700,\n      lineHeight: 1.2,\n    },\n  },\n} satisfies PdfcnTheme;\n",
+      "type": "registry:lib"
+    }
+  ],
+  "categories": ["theme"]
+}

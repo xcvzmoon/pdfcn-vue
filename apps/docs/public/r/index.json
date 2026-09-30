@@ -1,0 +1,392 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry.json",
+  "name": "pdfcn-vue",
+  "homepage": "https://github.com/xcvzmoon/pdfcn-vue",
+  "items": [
+    {
+      "name": "pdfcn-core",
+      "type": "registry:lib",
+      "title": "pdfcn core",
+      "description": "Shared PDF theme types, color resolution, style helpers, and the default professional theme.",
+      "categories": ["lib", "theme"]
+    },
+    {
+      "name": "theme-provider",
+      "type": "registry:component",
+      "title": "PdfcnThemeProvider",
+      "description": "Provide a PdfcnTheme to all pdfcn components under the provider.",
+      "categories": ["theme", "component"]
+    },
+    {
+      "name": "theme-modern",
+      "type": "registry:lib",
+      "title": "Modern theme",
+      "description": "The modern PdfcnTheme preset.",
+      "categories": ["theme"]
+    },
+    {
+      "name": "theme-minimal",
+      "type": "registry:lib",
+      "title": "Minimal theme",
+      "description": "The minimal PdfcnTheme preset.",
+      "categories": ["theme"]
+    },
+    {
+      "name": "theme-executive",
+      "type": "registry:lib",
+      "title": "Executive theme",
+      "description": "The executive PdfcnTheme preset.",
+      "categories": ["theme"]
+    },
+    {
+      "name": "theme-corporate",
+      "type": "registry:lib",
+      "title": "Corporate theme",
+      "description": "The corporate PdfcnTheme preset.",
+      "categories": ["theme"]
+    },
+    {
+      "name": "theme-elegant",
+      "type": "registry:lib",
+      "title": "Elegant theme",
+      "description": "The elegant PdfcnTheme preset.",
+      "categories": ["theme"]
+    },
+    {
+      "name": "theme-vivid",
+      "type": "registry:lib",
+      "title": "Vivid theme",
+      "description": "The vivid PdfcnTheme preset.",
+      "categories": ["theme"]
+    },
+    {
+      "name": "theme-forest",
+      "type": "registry:lib",
+      "title": "Forest theme",
+      "description": "The forest PdfcnTheme preset.",
+      "categories": ["theme"]
+    },
+    {
+      "name": "theme-blueprint",
+      "type": "registry:lib",
+      "title": "Blueprint theme",
+      "description": "The blueprint PdfcnTheme preset.",
+      "categories": ["theme"]
+    },
+    {
+      "name": "text",
+      "type": "registry:component",
+      "title": "Text",
+      "description": "Body text with theme-aware typography and color.",
+      "categories": ["component"]
+    },
+    {
+      "name": "heading",
+      "type": "registry:component",
+      "title": "Heading",
+      "description": "Document headings (H1–H6) with theme scale.",
+      "categories": ["component"]
+    },
+    {
+      "name": "stack",
+      "type": "registry:component",
+      "title": "Stack",
+      "description": "Vertical or horizontal stack layout primitive.",
+      "categories": ["component"]
+    },
+    {
+      "name": "section",
+      "type": "registry:component",
+      "title": "Section",
+      "description": "Titled section container with spacing from the theme.",
+      "categories": ["component"]
+    },
+    {
+      "name": "divider",
+      "type": "registry:component",
+      "title": "Divider",
+      "description": "Horizontal or vertical divider with theme colors.",
+      "categories": ["component"]
+    },
+    {
+      "name": "page-break",
+      "type": "registry:component",
+      "title": "PageBreak",
+      "description": "Explicit page break for multi-page documents.",
+      "categories": ["component"]
+    },
+    {
+      "name": "keep-together",
+      "type": "registry:component",
+      "title": "KeepTogether",
+      "description": "Keep child content on the same page when possible.",
+      "categories": ["component"]
+    },
+    {
+      "name": "link",
+      "type": "registry:component",
+      "title": "Link",
+      "description": "External or internal PDF link.",
+      "categories": ["component"]
+    },
+    {
+      "name": "list",
+      "type": "registry:component",
+      "title": "List",
+      "description": "Ordered and unordered lists with nested items.",
+      "categories": ["component"]
+    },
+    {
+      "name": "card",
+      "type": "registry:component",
+      "title": "Card",
+      "description": "Bordered or muted content card.",
+      "categories": ["component"]
+    },
+    {
+      "name": "badge",
+      "type": "registry:component",
+      "title": "Badge",
+      "description": "Compact status or category label.",
+      "categories": ["component"]
+    },
+    {
+      "name": "alert",
+      "type": "registry:component",
+      "title": "Alert",
+      "description": "Inline callout with tone variants.",
+      "categories": ["component"]
+    },
+    {
+      "name": "key-value",
+      "type": "registry:component",
+      "title": "KeyValue",
+      "description": "Aligned label/value pairs for metadata blocks.",
+      "categories": ["component"]
+    },
+    {
+      "name": "table",
+      "type": "registry:component",
+      "title": "Table",
+      "description": "Semantic table primitives (header, body, row, cell, footer).",
+      "categories": ["component"]
+    },
+    {
+      "name": "data-table",
+      "type": "registry:component",
+      "title": "DataTable",
+      "description": "Column-driven data table with compact styles and footers.",
+      "categories": ["component"]
+    },
+    {
+      "name": "form",
+      "type": "registry:component",
+      "title": "Form",
+      "description": "Printable form fields and field groups.",
+      "categories": ["component"]
+    },
+    {
+      "name": "graph",
+      "type": "registry:component",
+      "title": "Graph",
+      "description": "Chart wrapper (bar, line, area, pie) over Forme chart primitives.",
+      "categories": ["component"]
+    },
+    {
+      "name": "qrcode",
+      "type": "registry:component",
+      "title": "QrCode",
+      "description": "QR code with optional caption.",
+      "categories": ["component"]
+    },
+    {
+      "name": "pdf-image",
+      "type": "registry:component",
+      "title": "PdfImage",
+      "description": "Image with fit modes and caption support.",
+      "categories": ["component"]
+    },
+    {
+      "name": "page-header",
+      "type": "registry:component",
+      "title": "PageHeader",
+      "description": "Fixed page header with logo, title, and meta slots.",
+      "categories": ["chrome", "component"]
+    },
+    {
+      "name": "page-footer",
+      "type": "registry:component",
+      "title": "PageFooter",
+      "description": "Fixed page footer with variant layouts.",
+      "categories": ["chrome", "component"]
+    },
+    {
+      "name": "page-number",
+      "type": "registry:component",
+      "title": "PageNumber",
+      "description": "Page number / total pages chrome.",
+      "categories": ["chrome", "component"]
+    },
+    {
+      "name": "watermark",
+      "type": "registry:component",
+      "title": "Watermark",
+      "description": "Diagonal or centered watermark text.",
+      "categories": ["chrome", "component"]
+    },
+    {
+      "name": "signature",
+      "type": "registry:component",
+      "title": "Signature",
+      "description": "Signature block with signer metadata.",
+      "categories": ["component"]
+    },
+    {
+      "name": "block-shared",
+      "type": "registry:lib",
+      "title": "Block shared helpers",
+      "description": "Shared formatters and layout used by report and invoice blocks.",
+      "categories": ["block", "lib"]
+    },
+    {
+      "name": "invoice-minimal",
+      "type": "registry:block",
+      "title": "Invoice Minimal",
+      "description": "The Invoice Minimal document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "invoice-classic",
+      "type": "registry:block",
+      "title": "Invoice Classic",
+      "description": "The Invoice Classic document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "invoice-modern",
+      "type": "registry:block",
+      "title": "Invoice Modern",
+      "description": "The Invoice Modern document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "invoice-corporate",
+      "type": "registry:block",
+      "title": "Invoice Corporate",
+      "description": "The Invoice Corporate document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "invoice-creative",
+      "type": "registry:block",
+      "title": "Invoice Creative",
+      "description": "The Invoice Creative document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "invoice-consultant",
+      "type": "registry:block",
+      "title": "Invoice Consultant",
+      "description": "The Invoice Consultant document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "report-financial",
+      "type": "registry:block",
+      "title": "Report Financial",
+      "description": "The Report Financial document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "report-marketing",
+      "type": "registry:block",
+      "title": "Report Marketing",
+      "description": "The Report Marketing document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "report-operations",
+      "type": "registry:block",
+      "title": "Report Operations",
+      "description": "The Report Operations document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "report-security",
+      "type": "registry:block",
+      "title": "Report Security",
+      "description": "The Report Security document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "event-agenda",
+      "type": "registry:block",
+      "title": "Event Agenda",
+      "description": "The Event Agenda document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "event-ticket",
+      "type": "registry:block",
+      "title": "Event Ticket",
+      "description": "The Event Ticket document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "gift-certificate",
+      "type": "registry:block",
+      "title": "Gift Certificate",
+      "description": "The Gift Certificate document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "lesson-plan",
+      "type": "registry:block",
+      "title": "Lesson Plan",
+      "description": "The Lesson Plan document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "medical-intake-form",
+      "type": "registry:block",
+      "title": "Medical Intake Form",
+      "description": "The Medical Intake Form document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "meeting-minutes",
+      "type": "registry:block",
+      "title": "Meeting Minutes",
+      "description": "The Meeting Minutes document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "packing-slip",
+      "type": "registry:block",
+      "title": "Packing Slip",
+      "description": "The Packing Slip document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "press-release",
+      "type": "registry:block",
+      "title": "Press Release",
+      "description": "The Press Release document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "shipping-label",
+      "type": "registry:block",
+      "title": "Shipping Label",
+      "description": "The Shipping Label document block with sample data.",
+      "categories": ["block"]
+    },
+    {
+      "name": "work-order",
+      "type": "registry:block",
+      "title": "Work Order",
+      "description": "The Work Order document block with sample data.",
+      "categories": ["block"]
+    }
+  ]
+}

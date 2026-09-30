@@ -1,0 +1,18 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry-item.json",
+  "name": "qrcode",
+  "type": "registry:component",
+  "title": "QrCode",
+  "description": "QR code with optional caption.",
+  "author": "pdfcn-vue",
+  "dependencies": ["@formepdf/vue@^0.25.0", "vue@^3.4.0"],
+  "registryDependencies": ["https://pdfcn-vue.example.com/r/pdfcn-core.json"],
+  "files": [
+    {
+      "path": "registry/components/pdf/QrCode.vue",
+      "content": "<script setup lang=\"ts\">\nimport type { Style } from '@formepdf/vue';\nimport { QrCode as FormeQrCode, Text, View } from '@formepdf/vue';\nimport { computed } from 'vue';\nimport { resolveColor } from '@/lib/pdfcn/resolve-color';\nimport { mergePdfStyles } from '@/lib/pdfcn/styles';\nimport { usePdfcnTheme } from '@/lib/pdfcn/theme';\n\nconst props = withDefaults(\n  defineProps<{\n    value: string;\n    size?: number;\n    color?: string | undefined;\n    backgroundColor?: string | undefined;\n    caption?: string | undefined;\n    style?: Style | undefined;\n  }>(),\n  { color: '#000000', size: 100 },\n);\n\nconst theme = usePdfcnTheme();\n\nconst containerStyle = computed<Style>(() => mergePdfStyles({ alignItems: 'center' }, props.style));\n\nconst qrColor = computed(() => resolveColor(props.color, theme.value.colors));\n\nconst captionStyle = computed<Style>(() => {\n  const current = theme.value;\n  return {\n    color: current.colors.mutedForeground,\n    fontFamily: current.typography.body.fontFamily,\n    fontSize: current.primitives.typography.xs,\n    marginTop: current.primitives.spacing[1],\n    textAlign: 'center',\n  };\n});\n</script>\n\n<template>\n  <View :style=\"containerStyle\">\n    <FormeQrCode :data=\"value\" :size=\"size\" :color=\"qrColor\" />\n    <Text v-if=\"caption\" :style=\"captionStyle\">{{ caption }}</Text>\n  </View>\n</template>\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["component"]
+}
