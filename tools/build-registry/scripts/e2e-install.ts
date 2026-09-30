@@ -19,8 +19,8 @@ const execFileAsync = promisify(execFile);
 
 const toolDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(toolDir, '../../..');
-const publicDir = path.join(repoRoot, 'apps/docs/public');
-const shadcnBin = path.join(repoRoot, 'apps/docs/node_modules/.bin/shadcn-vue');
+const publicDir = path.join(repoRoot, 'apps/website/public');
+const shadcnBin = path.join(repoRoot, 'apps/website/node_modules/.bin/shadcn-vue');
 
 const REQUIRED_ITEMS = [
   'pdfcn-core',
@@ -258,7 +258,6 @@ async function main(): Promise<void> {
       path.join(repoRoot, 'packages/registry/src'),
       path.join(publicDir, 'r'),
       path.join(repoRoot, 'registry.json'),
-      registryBase,
     );
     await writeCleanApp(appDir, registryUrl);
 

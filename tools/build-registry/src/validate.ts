@@ -54,8 +54,9 @@ export function validateRegistryItem(item: RegistryItemPayload): ValidationIssue
   }
 
   for (const dependency of item.registryDependencies) {
+    if (/^@[a-z0-9-]+\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(dependency)) continue;
     if (!dependency.includes('://')) {
-      push(`registryDependency "${dependency}" must be an absolute item URL.`);
+      push(`registryDependency "${dependency}" must be a namespaced item or an absolute item URL.`);
       continue;
     }
     try {
