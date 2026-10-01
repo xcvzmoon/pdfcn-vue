@@ -8,7 +8,7 @@ export type BlockSample = BlockSampleObject;
 const blockSampleValueSchema: v.GenericSchema<BlockSampleValue> = v.lazy(() =>
   v.union([
     v.string(),
-    v.number(),
+    v.pipe(v.number(), v.finite()),
     v.boolean(),
     v.null(),
     v.array(blockSampleValueSchema),
