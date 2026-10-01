@@ -93,3 +93,18 @@ test('default registry dependencies resolve through the configured namespace', a
   expect(invoice?.registryDependencies).toContain('@pdfcn-vue/pdfcn-core');
   expect(validateRegistryGraph(items)).toEqual([]);
 });
+
+test('installs the optional Takumi base without colliding with Forme components', async () => {
+  const items = await buildRegistryItems(registrySrc);
+  const takumi = items.find(({ name }) => name === 'takumi-core');
+  expect(takumi?.dependencies).toContain('takumi-pdf@0.15.0');
+  expect(takumi?.dependencies).toContain('@vue/server-renderer@^3.5.43');
+  expect(takumi?.registryDependencies).toContain('@pdfcn-vue/pdfcn-core');
+  expect(takumi?.registryDependencies).toContain('@pdfcn-vue/theme-provider');
+  expect(
+    takumi?.files.some(({ path: source }) => source === 'registry/components/pdf/takumi/Text.vue'),
+  ).toBe(true);
+  expect(
+    takumi?.files.some(({ path: source }) => source === 'registry/lib/pdfcn/takumi/index.ts'),
+  ).toBe(true);
+});

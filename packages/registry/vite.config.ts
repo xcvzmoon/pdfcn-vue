@@ -18,6 +18,7 @@ export default defineConfig({
     entry: {
       index: 'src/index.ts',
       forme: 'src/forme/index.ts',
+      takumi: 'src/takumi/index.ts',
     },
     dts: true,
   },

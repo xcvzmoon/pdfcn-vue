@@ -31,6 +31,22 @@ function stripTsExtension(value: string): string {
 export function resolveSourceLocation(source: string): SourceLocation {
   const posixSource = toPosix(source);
 
+  if (posixSource.startsWith('takumi/')) {
+    const nested = posixSource.slice('takumi/'.length);
+    const component = nested.startsWith('components/');
+    const installPath = component ? nested.slice('components/'.length) : nested;
+    const registryPath = component
+      ? `${COMPONENTS_INSTALL_PREFIX}/takumi/${installPath}`
+      : `${LIB_INSTALL_PREFIX}/takumi/${installPath}`;
+    return {
+      source: posixSource,
+      registryPath,
+      alias: component
+        ? `@/components/pdf/takumi/${stripTsExtension(installPath)}`
+        : `@/lib/pdfcn/takumi/${stripTsExtension(installPath)}`,
+    };
+  }
+
   if (
     posixSource.startsWith('types/') ||
     posixSource.startsWith('forme/lib/') ||
@@ -90,6 +106,7 @@ export function filePayloadType(
 
 export function isRegistrySource(source: string): boolean {
   return (
+    source.startsWith('takumi/') ||
     source.startsWith('types/') ||
     source.startsWith('forme/lib/') ||
     source.startsWith('forme/components/') ||

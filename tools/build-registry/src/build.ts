@@ -15,6 +15,8 @@ import { rewriteImports } from './rewrite-imports.ts';
 
 const NPM_DEPENDENCIES = {
   vue: '^3.4.0',
+  'takumi-pdf': '0.15.0',
+  '@vue/server-renderer': '^3.5.43',
   '@formepdf/core': '^0.25.0',
   '@formepdf/vue': '^0.25.0',
 } as const satisfies Record<string, string>;
@@ -27,6 +29,9 @@ function toDependencySpec(packageName: string): string {
   if (packageName === '@formepdf/core')
     return `@formepdf/core@${NPM_DEPENDENCIES['@formepdf/core']}`;
   if (packageName === '@formepdf/vue') return `@formepdf/vue@${NPM_DEPENDENCIES['@formepdf/vue']}`;
+  if (packageName === 'takumi-pdf') return `takumi-pdf@${NPM_DEPENDENCIES['takumi-pdf']}`;
+  if (packageName === '@vue/server-renderer')
+    return `@vue/server-renderer@${NPM_DEPENDENCIES['@vue/server-renderer']}`;
   return packageName;
 }
 

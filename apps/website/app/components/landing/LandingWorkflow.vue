@@ -22,7 +22,7 @@
         'Render with Forme in the browser or on your server. Download a PDF or return it from a Nuxt endpoint.',
     },
   ];
-  const command = 'pnpm dlx shadcn-vue@latest add @pdfcn-vue/invoice-minimal';
+  const command = 'npx shadcn-vue@latest add @pdfcn-vue/invoice-minimal';
 </script>
 
 <template>

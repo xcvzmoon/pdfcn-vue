@@ -26,6 +26,7 @@
     "shadcn-nuxt": "catalog:website",
     "shiki": "catalog:website",
     "tailwind-merge": "catalog:website",
+    "takumi-pdf": "catalog:",
     "valibot": "catalog:website",
     "vue": "catalog:",
     "vue-router": "catalog:website",
