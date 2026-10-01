@@ -1,0 +1,39 @@
+# pdfcn-vue
+
+> Vue PDF components and document blocks rendered with Forme. Install source through a shadcn-vue custom registry and edit it in your application.
+
+Links below resolve relative to the host serving this file. The registry namespace is `@pdfcn-vue`; configure it as `<site-origin>/r/{name}.json` in your project's `components.json`.
+
+## Guides
+
+- [Introduction](/docs): Component library overview.
+- [Installation](/docs/installation): Set up a Vue consumer and install registry items.
+- [Registry](/docs/registry): Namespace, dependency resolution, source paths, and hosting.
+- [Agent discovery](/docs/agents): Read the catalog, inspect item source, and use shadcn-vue.
+- [Rendering](/docs/rendering): Browser WASM and Node PDF rendering with Forme.
+- [Nuxt integration](/docs/nuxt): Compiler configuration, client previews, and server endpoints.
+- [Theming](/docs/theming): PDF theme tokens and presets.
+- [PDF standards](/docs/pdf-standards): PDF/UA and PDF/A document requirements and validation.
+- [Fillable forms](/docs/fillable-forms): Interactive form fields and flattened PDF output.
+- [Takumi](/docs/takumi): HTML-to-PDF rendering for previews and exports.
+
+## Components and blocks
+
+- [Components](/docs/components): Primitive, layout, data, and page chrome documentation.
+- [Blocks](/docs/blocks): Document templates and sample data.
+- [Theme builder](/theme-builder): Edit and export PDF theme tokens.
+
+## Registry JSON
+
+- [Catalog](/r/index.json): Item names, types, descriptions, and categories. Fetch `/r/{name}.json` for each item's source files and dependencies.
+- [Takumi core](/r/takumi-core.json): Optional HTML-to-PDF base and themed core components.
+- [Core](/r/pdfcn-core.json): Shared theme types, default theme, and style helpers.
+- [Theme provider](/r/theme-provider.json): Vue provide/inject PDF theming.
+- [Text](/r/text.json): A primitive component payload.
+- [Minimal invoice](/r/invoice-minimal.json): A document block payload with sample data.
+
+Register the namespace before installing `@pdfcn-vue/text` or `@pdfcn-vue/invoice-minimal` with `shadcn-vue add`. The CLI resolves `registryDependencies` and copies source into the consumer project. Inspect source before installation and run the consumer's checks afterward.
+
+## Source
+
+- [Repository](https://github.com/xcvzmoon/pdfcn-vue): Source, development instructions, and issue tracking.
