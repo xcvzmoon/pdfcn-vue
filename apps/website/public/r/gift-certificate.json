@@ -26,7 +26,7 @@
     },
     {
       "path": "registry/components/pdf/blocks/gift-certificate/gift-certificate.sample.ts",
-      "content": "import type { GiftCertificateData } from '@/components/pdf/blocks/gift-certificate/gift-certificate.types';\n\nexport const sampleGiftCertificateData: GiftCertificateData = {\n  accentColor: '#0f766e',\n  amount: 50,\n  certificateCode: 'PDFCN-GC-2026-00891',\n  companyName: 'Harbor Roasters',\n  companyContact: 'hello@harborroasters.com · (555) 246-8100',\n  currency: 'USD',\n  expiryDate: 'March 31, 2027',\n  message: 'Happy Birthday! Enjoy a coffee on us.',\n  recipientName: 'Sarah',\n  redemptionInstructions: 'Present this certificate at any Harbor Roasters location.',\n  senderName: 'Mom & Dad',\n  terms: 'No cash value. Non-refundable. One use per visit. Not valid with other offers.',\n};\n",
+      "content": "import type { GiftCertificateData } from '@/components/pdf/blocks/gift-certificate/gift-certificate.types';\n\nexport const sampleGiftCertificateData: GiftCertificateData = {\n  accentColor: '#0f766e',\n  amount: 50,\n  certificateCode: 'PDFCN-VUE-GC-2026-00891',\n  companyName: 'Harbor Roasters',\n  companyContact: 'hello@harborroasters.com · (555) 246-8100',\n  currency: 'USD',\n  expiryDate: 'March 31, 2027',\n  message: 'Happy Birthday! Enjoy a coffee on us.',\n  recipientName: 'Sarah',\n  redemptionInstructions: 'Present this certificate at any Harbor Roasters location.',\n  senderName: 'Mom & Dad',\n  terms: 'No cash value. Non-refundable. One use per visit. Not valid with other offers.',\n};\n",
       "type": "registry:lib"
     }
   ],
