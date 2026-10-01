@@ -20,6 +20,7 @@ import InvoiceMinimal from '../src/forme/blocks/invoice-minimal/InvoiceMinimal.v
 import { sampleInvoiceModernData } from '../src/forme/blocks/invoice-modern/invoice-modern.sample.ts';
 import InvoiceModern from '../src/forme/blocks/invoice-modern/InvoiceModern.vue';
 import { formatCurrency } from '../src/forme/blocks/shared/format.ts';
+import { expectPdfPages } from './pdf-smoke.ts';
 
 function collectText(nodes: FormeNode[]): string {
   const parts: string[] = [];
@@ -101,6 +102,7 @@ for (const invoiceCase of invoiceCases) {
     const document = await serialize(invoiceCase.component, {
       props: invoiceCase.props,
     });
+    expect(document).toMatchSnapshot();
     const text = collectText(document.children);
     for (const expected of invoiceCase.mustContain) {
       expect(text).toContain(expected);
@@ -115,5 +117,6 @@ for (const invoiceCase of invoiceCases) {
 
     expect(bytes.length).toBeGreaterThan(1000);
     expect(new TextDecoder().decode(bytes.subarray(0, 5))).toBe('%PDF-');
+    await expectPdfPages(bytes);
   });
 }

@@ -16,6 +16,7 @@ import { sampleMeetingMinutesData } from '../src/forme/blocks/meeting-minutes/me
 import MeetingMinutes from '../src/forme/blocks/meeting-minutes/MeetingMinutes.vue';
 import { samplePressReleaseData } from '../src/forme/blocks/press-release/press-release.sample.ts';
 import PressRelease from '../src/forme/blocks/press-release/PressRelease.vue';
+import { expectPdfPages } from './pdf-smoke.ts';
 
 function collectText(nodes: FormeNode[]): string {
   const parts: string[] = [];
@@ -39,12 +40,14 @@ async function expectValidPdf(document: FormeDocument): Promise<void> {
 
   expect(bytes.length).toBeGreaterThan(1000);
   expect(new TextDecoder().decode(bytes.subarray(0, 5))).toBe('%PDF-');
+  await expectPdfPages(bytes);
 }
 
 test('serializes event-agenda with sample data', async () => {
   const document = await serialize(EventAgenda, {
     props: { data: sampleEventAgendaData },
   });
+  expect(document).toMatchSnapshot();
   const text = collectText(document.children);
 
   expect(text).toContain('React Summit 2026');
@@ -58,6 +61,7 @@ test('serializes event-ticket with sample data', async () => {
   const document = await serialize(EventTicket, {
     props: { data: sampleEventTicketData },
   });
+  expect(document).toMatchSnapshot();
   const text = collectText(document.children);
 
   expect(text).toContain('ShadCN Labs Conf');
@@ -71,6 +75,7 @@ test('serializes gift-certificate with sample data', async () => {
   const document = await serialize(GiftCertificate, {
     props: { data: sampleGiftCertificateData },
   });
+  expect(document).toMatchSnapshot();
   const text = collectText(document.children);
 
   expect(text).toContain('Gift Certificate');
@@ -84,6 +89,7 @@ test('serializes press-release with sample data', async () => {
   const document = await serialize(PressRelease, {
     props: { data: samplePressReleaseData },
   });
+  expect(document).toMatchSnapshot();
   const text = collectText(document.children);
 
   expect(text).toContain('Acme Corp Launches Revolutionary PDF Toolkit for Developers');
@@ -96,6 +102,7 @@ test('serializes lesson-plan with sample data', async () => {
   const document = await serialize(LessonPlan, {
     props: { data: sampleLessonPlanData },
   });
+  expect(document).toMatchSnapshot();
   const text = collectText(document.children);
 
   expect(text).toContain('Introduction to Linear Equations');
@@ -108,6 +115,7 @@ test('serializes medical-intake-form with sample data', async () => {
   const document = await serialize(MedicalIntakeForm, {
     props: { data: sampleMedicalIntakeFormData },
   });
+  expect(document).toMatchSnapshot();
   const text = collectText(document.children);
 
   expect(text).toContain('Riverside Family Clinic');
@@ -120,6 +128,7 @@ test('serializes meeting-minutes with sample data', async () => {
   const document = await serialize(MeetingMinutes, {
     props: { data: sampleMeetingMinutesData },
   });
+  expect(document).toMatchSnapshot();
   const text = collectText(document.children);
 
   expect(text).toContain('Q3 Product Roadmap Review');

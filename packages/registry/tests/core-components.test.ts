@@ -6,6 +6,7 @@ import { resolveColor } from '../src/forme/lib/resolve-color.ts';
 import { mergePdfStyles } from '../src/forme/lib/styles.ts';
 import { forestTheme } from '../src/themes/forest.ts';
 import CoreComponentsDocument from './fixtures/CoreComponentsDocument.vue';
+import { expectPdfPages } from './pdf-smoke.ts';
 
 function findNodes(nodes: FormeNode[], type: FormeNode['kind']['type']): FormeNode[] {
   const found: FormeNode[] = [];
@@ -30,6 +31,7 @@ test('resolves theme tokens and preserves direct colors', () => {
 
 test('serializes the core components with themed styles and document semantics', async () => {
   const document = await serialize(CoreComponentsDocument);
+  expect(document).toMatchSnapshot();
   const headings = findNodes(document.children, 'Heading');
   const texts = findNodes(document.children, 'Text');
   const views = findNodes(document.children, 'View');
@@ -70,4 +72,5 @@ test('renders all core components to a valid PDF', async () => {
 
   expect(bytes.length).toBeGreaterThan(1000);
   expect(new TextDecoder().decode(bytes.subarray(0, 5))).toBe('%PDF-');
+  await expectPdfPages(bytes);
 });

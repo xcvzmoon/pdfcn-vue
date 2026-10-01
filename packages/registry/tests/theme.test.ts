@@ -48,3 +48,11 @@ test('scopes themes to each concurrent serialized document', async () => {
     parseColor(themePresets.blueprint.colors.primary),
   );
 });
+
+for (const [name, theme] of Object.entries(themePresets)) {
+  test(`serializes the ${name} theme fixture consistently`, async () => {
+    const document = await serialize(ThemeDocument, { props: { theme } });
+    expect(document).toMatchSnapshot();
+    expect(document.metadata.title).toBe(name);
+  });
+}

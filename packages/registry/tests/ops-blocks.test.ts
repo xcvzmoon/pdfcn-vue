@@ -8,6 +8,7 @@ import { sampleShippingLabelData } from '../src/forme/blocks/shipping-label/ship
 import ShippingLabel from '../src/forme/blocks/shipping-label/ShippingLabel.vue';
 import { sampleWorkOrderData } from '../src/forme/blocks/work-order/work-order.sample.ts';
 import WorkOrder from '../src/forme/blocks/work-order/WorkOrder.vue';
+import { expectPdfPages } from './pdf-smoke.ts';
 
 function collectText(nodes: FormeNode[]): string {
   const parts: string[] = [];
@@ -31,12 +32,14 @@ async function expectValidPdf(document: FormeDocument): Promise<void> {
 
   expect(bytes.length).toBeGreaterThan(1000);
   expect(new TextDecoder().decode(bytes.subarray(0, 5))).toBe('%PDF-');
+  await expectPdfPages(bytes);
 }
 
 test('serializes packing-slip with sample data', async () => {
   const document = await serialize(PackingSlip, {
     props: { data: samplePackingSlipData },
   });
+  expect(document).toMatchSnapshot();
   const text = collectText(document.children);
 
   expect(text).toContain('ORD-2026-0891');
@@ -58,6 +61,7 @@ test('serializes shipping-label with sample data', async () => {
   const document = await serialize(ShippingLabel, {
     props: { data: sampleShippingLabelData },
   });
+  expect(document).toMatchSnapshot();
   const text = collectText(document.children);
 
   expect(text).toContain('TRACK123456789US');
@@ -78,6 +82,7 @@ test('serializes work-order with sample data', async () => {
   const document = await serialize(WorkOrder, {
     props: { data: sampleWorkOrderData },
   });
+  expect(document).toMatchSnapshot();
   const text = collectText(document.children);
 
   expect(text).toContain('WO-2026-0452');
