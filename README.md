@@ -59,6 +59,10 @@ vp run validate
 
 The website renders Vue documents in the browser. Registry install tests use a separate temporary Vite consumer.
 
+## Community
+
+Read the [contributing guide](./CONTRIBUTING.md) before opening a pull request. Participation follows the [code of conduct](./CODE_OF_CONDUCT.md). Report vulnerabilities through the [security policy](./SECURITY.md).
+
 ## Credits
 
-Vue port of [shadcn-labs/pdfcn](https://github.com/shadcn-labs/pdfcn) (MIT). Theme tokens, component props, and block templates follow that project; the runtime here is Forme via `@formepdf/vue`.
+Vue port of [shadcn-labs/pdfcn](https://github.com/shadcn-labs/pdfcn) under the [MIT license](./LICENSE). Theme tokens, component props, and block templates follow that project; the runtime here is Forme via `@formepdf/vue`.

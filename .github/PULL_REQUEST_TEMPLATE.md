@@ -35,8 +35,8 @@ Please make sure your PR title follows Conventional Commits, e.g.:
 ## Checklist
 
 - [ ] My PR title follows the [Conventional Commits](https://www.conventionalcommits.org/) specification.
-- [ ] `vp run check` completes successfully (format, lint, and types).
-- [ ] `vp run test` completes with all tests passing.
+- [ ] `vp run validate` completes successfully (formatting, lint, Vue type checks, tests, and website build).
+- [ ] Registry build and CLI install checks pass if this PR changes registry distribution.
 - [ ] I have added or updated tests that cover my changes, where applicable.
 - [ ] I have updated documentation, where applicable.
 - [ ] My changes generate no new warnings or errors.
