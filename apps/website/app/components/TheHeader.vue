@@ -38,7 +38,7 @@
       >
         <span
           >pdfcn<span
-            class="brand-suffix text-[15px] font-normal tracking-[-0.04em] text-muted-foreground max-[420px]:hidden"
+            class="brand-suffix text-[15px] font-normal tracking-[-0.04em] text-muted-foreground"
           >
             / vue</span
           ></span

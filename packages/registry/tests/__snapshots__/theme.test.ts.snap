@@ -1,0 +1,487 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`serializes the blueprint theme fixture consistently 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [],
+          "kind": {
+            "content": "blueprint",
+            "type": "Text",
+          },
+          "style": {
+            "color": {
+              "a": 1,
+              "b": 0.16470588235294117,
+              "g": 0.09019607843137255,
+              "r": 0.058823529411764705,
+            },
+            "fontSize": 10,
+          },
+        },
+      ],
+      "kind": {
+        "config": {
+          "margin": {
+            "bottom": 52,
+            "left": 52,
+            "right": 52,
+            "top": 52,
+          },
+          "size": "A4",
+          "wrap": true,
+        },
+        "type": "Page",
+      },
+      "style": {},
+    },
+  ],
+  "defaultPage": {
+    "margin": {
+      "bottom": 54,
+      "left": 54,
+      "right": 54,
+      "top": 54,
+    },
+    "size": "A4",
+    "wrap": true,
+  },
+  "metadata": {
+    "title": "blueprint",
+  },
+}
+`;
+
+exports[`serializes the corporate theme fixture consistently 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [],
+          "kind": {
+            "content": "corporate",
+            "type": "Text",
+          },
+          "style": {
+            "color": {
+              "a": 1,
+              "b": 0.5058823529411764,
+              "g": 0.2980392156862745,
+              "r": 0.058823529411764705,
+            },
+            "fontSize": 11,
+          },
+        },
+      ],
+      "kind": {
+        "config": {
+          "margin": {
+            "bottom": 52,
+            "left": 52,
+            "right": 52,
+            "top": 52,
+          },
+          "size": "A4",
+          "wrap": true,
+        },
+        "type": "Page",
+      },
+      "style": {},
+    },
+  ],
+  "defaultPage": {
+    "margin": {
+      "bottom": 54,
+      "left": 54,
+      "right": 54,
+      "top": 54,
+    },
+    "size": "A4",
+    "wrap": true,
+  },
+  "metadata": {
+    "title": "corporate",
+  },
+}
+`;
+
+exports[`serializes the elegant theme fixture consistently 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [],
+          "kind": {
+            "content": "elegant",
+            "type": "Text",
+          },
+          "style": {
+            "color": {
+              "a": 1,
+              "b": 0.058823529411764705,
+              "g": 0.20784313725490197,
+              "r": 0.47058823529411764,
+            },
+            "fontSize": 11,
+          },
+        },
+      ],
+      "kind": {
+        "config": {
+          "margin": {
+            "bottom": 60,
+            "left": 60,
+            "right": 60,
+            "top": 60,
+          },
+          "size": "A4",
+          "wrap": true,
+        },
+        "type": "Page",
+      },
+      "style": {},
+    },
+  ],
+  "defaultPage": {
+    "margin": {
+      "bottom": 54,
+      "left": 54,
+      "right": 54,
+      "top": 54,
+    },
+    "size": "A4",
+    "wrap": true,
+  },
+  "metadata": {
+    "title": "elegant",
+  },
+}
+`;
+
+exports[`serializes the executive theme fixture consistently 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [],
+          "kind": {
+            "content": "executive",
+            "type": "Text",
+          },
+          "style": {
+            "color": {
+              "a": 1,
+              "b": 0.37254901960784315,
+              "g": 0.22745098039215686,
+              "r": 0.11764705882352941,
+            },
+            "fontSize": 11,
+          },
+        },
+      ],
+      "kind": {
+        "config": {
+          "margin": {
+            "bottom": 64,
+            "left": 64,
+            "right": 64,
+            "top": 64,
+          },
+          "size": "A4",
+          "wrap": true,
+        },
+        "type": "Page",
+      },
+      "style": {},
+    },
+  ],
+  "defaultPage": {
+    "margin": {
+      "bottom": 54,
+      "left": 54,
+      "right": 54,
+      "top": 54,
+    },
+    "size": "A4",
+    "wrap": true,
+  },
+  "metadata": {
+    "title": "executive",
+  },
+}
+`;
+
+exports[`serializes the forest theme fixture consistently 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [],
+          "kind": {
+            "content": "forest",
+            "type": "Text",
+          },
+          "style": {
+            "color": {
+              "a": 1,
+              "b": 0.23921568627450981,
+              "g": 0.5019607843137255,
+              "r": 0.08235294117647059,
+            },
+            "fontSize": 11,
+          },
+        },
+      ],
+      "kind": {
+        "config": {
+          "margin": {
+            "bottom": 56,
+            "left": 56,
+            "right": 56,
+            "top": 56,
+          },
+          "size": "A4",
+          "wrap": true,
+        },
+        "type": "Page",
+      },
+      "style": {},
+    },
+  ],
+  "defaultPage": {
+    "margin": {
+      "bottom": 54,
+      "left": 54,
+      "right": 54,
+      "top": 54,
+    },
+    "size": "A4",
+    "wrap": true,
+  },
+  "metadata": {
+    "title": "forest",
+  },
+}
+`;
+
+exports[`serializes the minimal theme fixture consistently 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [],
+          "kind": {
+            "content": "minimal",
+            "type": "Text",
+          },
+          "style": {
+            "color": {
+              "a": 1,
+              "b": 0.10588235294117647,
+              "g": 0.09411764705882353,
+              "r": 0.09411764705882353,
+            },
+            "fontSize": 11,
+          },
+        },
+      ],
+      "kind": {
+        "config": {
+          "margin": {
+            "bottom": 72,
+            "left": 72,
+            "right": 72,
+            "top": 72,
+          },
+          "size": "A4",
+          "wrap": true,
+        },
+        "type": "Page",
+      },
+      "style": {},
+    },
+  ],
+  "defaultPage": {
+    "margin": {
+      "bottom": 54,
+      "left": 54,
+      "right": 54,
+      "top": 54,
+    },
+    "size": "A4",
+    "wrap": true,
+  },
+  "metadata": {
+    "title": "minimal",
+  },
+}
+`;
+
+exports[`serializes the modern theme fixture consistently 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [],
+          "kind": {
+            "content": "modern",
+            "type": "Text",
+          },
+          "style": {
+            "color": {
+              "a": 1,
+              "b": 0.3333333333333333,
+              "g": 0.2549019607843137,
+              "r": 0.2,
+            },
+            "fontSize": 11,
+          },
+        },
+      ],
+      "kind": {
+        "config": {
+          "margin": {
+            "bottom": 40,
+            "left": 40,
+            "right": 40,
+            "top": 40,
+          },
+          "size": "A4",
+          "wrap": true,
+        },
+        "type": "Page",
+      },
+      "style": {},
+    },
+  ],
+  "defaultPage": {
+    "margin": {
+      "bottom": 54,
+      "left": 54,
+      "right": 54,
+      "top": 54,
+    },
+    "size": "A4",
+    "wrap": true,
+  },
+  "metadata": {
+    "title": "modern",
+  },
+}
+`;
+
+exports[`serializes the professional theme fixture consistently 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [],
+          "kind": {
+            "content": "professional",
+            "type": "Text",
+          },
+          "style": {
+            "color": {
+              "a": 1,
+              "b": 0.10588235294117647,
+              "g": 0.09411764705882353,
+              "r": 0.09411764705882353,
+            },
+            "fontSize": 11,
+          },
+        },
+      ],
+      "kind": {
+        "config": {
+          "margin": {
+            "bottom": 56,
+            "left": 56,
+            "right": 56,
+            "top": 56,
+          },
+          "size": "A4",
+          "wrap": true,
+        },
+        "type": "Page",
+      },
+      "style": {},
+    },
+  ],
+  "defaultPage": {
+    "margin": {
+      "bottom": 54,
+      "left": 54,
+      "right": 54,
+      "top": 54,
+    },
+    "size": "A4",
+    "wrap": true,
+  },
+  "metadata": {
+    "title": "professional",
+  },
+}
+`;
+
+exports[`serializes the vivid theme fixture consistently 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [],
+          "kind": {
+            "content": "vivid",
+            "type": "Text",
+          },
+          "style": {
+            "color": {
+              "a": 1,
+              "b": 0.8509803921568627,
+              "g": 0.1568627450980392,
+              "r": 0.42745098039215684,
+            },
+            "fontSize": 11,
+          },
+        },
+      ],
+      "kind": {
+        "config": {
+          "margin": {
+            "bottom": 48,
+            "left": 48,
+            "right": 48,
+            "top": 48,
+          },
+          "size": "A4",
+          "wrap": true,
+        },
+        "type": "Page",
+      },
+      "style": {},
+    },
+  ],
+  "defaultPage": {
+    "margin": {
+      "bottom": 54,
+      "left": 54,
+      "right": 54,
+      "top": 54,
+    },
+    "size": "A4",
+    "wrap": true,
+  },
+  "metadata": {
+    "title": "vivid",
+  },
+}
+`;

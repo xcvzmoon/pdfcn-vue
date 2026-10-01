@@ -11,6 +11,7 @@ import { sampleReportOperationsData } from '../src/forme/blocks/report-operation
 import ReportOperations from '../src/forme/blocks/report-operations/ReportOperations.vue';
 import { sampleReportSecurityData } from '../src/forme/blocks/report-security/report-security.sample.ts';
 import ReportSecurity from '../src/forme/blocks/report-security/ReportSecurity.vue';
+import { expectPdfPages } from './pdf-smoke.ts';
 
 function collectText(nodes: FormeNode[]): string {
   const parts: string[] = [];
@@ -83,9 +84,10 @@ const reportCases: ReportCase[] = [
   },
 ];
 
-function expectValidPdf(bytes: Uint8Array): void {
+async function expectValidPdf(bytes: Uint8Array): Promise<void> {
   expect(bytes.length).toBeGreaterThan(1000);
   expect(new TextDecoder().decode(bytes.subarray(0, 5))).toBe('%PDF-');
+  await expectPdfPages(bytes);
 }
 
 for (const reportCase of reportCases) {
@@ -93,6 +95,7 @@ for (const reportCase of reportCases) {
     const document = await serialize(reportCase.component, {
       props: { data: reportCase.data },
     });
+    expect(document).toMatchSnapshot();
     const text = collectText(document.children);
 
     for (const fragment of reportCase.mustContain) {
@@ -100,7 +103,7 @@ for (const reportCase of reportCases) {
     }
 
     const bytes = await renderSerializedDoc({ ...document });
-    expectValidPdf(bytes);
+    await expectValidPdf(bytes);
   });
 }
 
@@ -108,6 +111,7 @@ test('report layout includes shared chrome labels', async () => {
   const document = await serialize(ReportFinancial, {
     props: { data: sampleReportFinancialData },
   });
+  expect(document).toMatchSnapshot();
   const text = collectText(document.children);
 
   expect(text).toContain('Executive Summary');

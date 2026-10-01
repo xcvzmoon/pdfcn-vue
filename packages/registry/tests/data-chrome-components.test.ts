@@ -5,6 +5,7 @@ import { expect, test } from 'vite-plus/test';
 import { formatValue } from '../src/forme/components/data-table.styles.ts';
 import { categoryLabels, isPointList, normalizeData } from '../src/forme/components/graph.utils.ts';
 import DataChromeDocument from './fixtures/DataChromeDocument.vue';
+import { expectPdfPages } from './pdf-smoke.ts';
 
 function findNodes(nodes: FormeNode[], type: FormeNode['kind']['type']): FormeNode[] {
   const found: FormeNode[] = [];
@@ -91,6 +92,7 @@ test('renders all data and chrome components to a valid PDF', async () => {
 
   expect(bytes.length).toBeGreaterThan(1000);
   expect(new TextDecoder().decode(bytes.subarray(0, 5))).toBe('%PDF-');
+  await expectPdfPages(bytes);
 });
 
 test('keeps serialized document structure stable', async () => {

@@ -1,0 +1,3608 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`serializes the core components with themed styles and document semantics 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [],
+          "kind": {
+            "content": "Core heading",
+            "level": 2,
+            "type": "Heading",
+          },
+          "style": {
+            "color": {
+              "a": 1,
+              "b": 0.23921568627450981,
+              "g": 0.5019607843137255,
+              "r": 0.08235294117647059,
+            },
+            "fontFamily": "Merriweather",
+            "fontSize": 24,
+            "fontWeight": 700,
+            "letterSpacing": 0,
+            "lineHeight": 1.25,
+            "margin": {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "top": 0,
+            },
+          },
+        },
+        {
+          "children": [],
+          "kind": {
+            "content": " Styled text ",
+            "type": "Text",
+          },
+          "style": {
+            "color": {
+              "a": 1,
+              "b": 0.37254901960784315,
+              "g": 0.48627450980392156,
+              "r": 0.30196078431372547,
+            },
+            "fontFamily": "Inter",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "lineHeight": 1.6,
+            "margin": {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "top": 0,
+            },
+            "textDecoration": "None",
+          },
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "kind": {
+                "content": "Left",
+                "type": "Text",
+              },
+              "style": {
+                "color": {
+                  "a": 1,
+                  "b": 0.17647058823529413,
+                  "g": 0.3254901960784314,
+                  "r": 0.0784313725490196,
+                },
+                "fontFamily": "Inter",
+                "fontSize": 11,
+                "fontWeight": 400,
+                "lineHeight": 1.6,
+                "margin": {
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                  "top": 0,
+                },
+                "textDecoration": "None",
+              },
+            },
+            {
+              "children": [],
+              "kind": {
+                "content": "Right",
+                "type": "Text",
+              },
+              "style": {
+                "color": {
+                  "a": 1,
+                  "b": 0.17647058823529413,
+                  "g": 0.3254901960784314,
+                  "r": 0.0784313725490196,
+                },
+                "fontFamily": "Inter",
+                "fontSize": 11,
+                "fontWeight": 400,
+                "lineHeight": 1.6,
+                "margin": {
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                  "top": 0,
+                },
+                "textDecoration": "None",
+              },
+            },
+          ],
+          "kind": {
+            "type": "View",
+          },
+          "style": {
+            "alignItems": "Center",
+            "flexDirection": "Row",
+            "gap": 8,
+            "justifyContent": "SpaceBetween",
+            "wrap": true,
+          },
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "kind": {
+                    "content": "Kept section",
+                    "type": "Text",
+                  },
+                  "style": {
+                    "color": {
+                      "a": 1,
+                      "b": 0.17647058823529413,
+                      "g": 0.3254901960784314,
+                      "r": 0.0784313725490196,
+                    },
+                    "fontFamily": "Inter",
+                    "fontSize": 11,
+                    "fontWeight": 400,
+                    "lineHeight": 1.6,
+                    "margin": {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                      "top": 0,
+                    },
+                    "textDecoration": "None",
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "content": "",
+                    "runs": [
+                      {
+                        "content": "Example link",
+                        "href": "https://example.com",
+                        "style": {
+                          "color": {
+                            "a": 1,
+                            "b": 0.23921568627450981,
+                            "g": 0.5019607843137255,
+                            "r": 0.08235294117647059,
+                          },
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": 600,
+                          "lineHeight": 1.6,
+                          "margin": {
+                            "bottom": 10,
+                            "left": 0,
+                            "right": 0,
+                            "top": 0,
+                          },
+                          "textDecoration": "Underline",
+                        },
+                      },
+                    ],
+                    "type": "Text",
+                  },
+                  "style": {
+                    "color": {
+                      "a": 1,
+                      "b": 0.23921568627450981,
+                      "g": 0.5019607843137255,
+                      "r": 0.08235294117647059,
+                    },
+                    "fontFamily": "Inter",
+                    "fontSize": 11,
+                    "fontWeight": 600,
+                    "lineHeight": 1.6,
+                    "margin": {
+                      "bottom": 10,
+                      "left": 0,
+                      "right": 0,
+                      "top": 0,
+                    },
+                    "textDecoration": "Underline",
+                  },
+                },
+              ],
+              "kind": {
+                "type": "View",
+              },
+              "style": {
+                "wrap": false,
+              },
+            },
+          ],
+          "kind": {
+            "type": "View",
+          },
+          "style": {
+            "backgroundColor": {
+              "a": 1,
+              "b": 0.9568627450980393,
+              "g": 0.9921568627450981,
+              "r": 0.9411764705882353,
+            },
+            "borderColor": {
+              "bottom": {
+                "a": 1,
+                "b": 0,
+                "g": 0,
+                "r": 0,
+              },
+              "left": {
+                "a": 1,
+                "b": 0.23921568627450981,
+                "g": 0.5019607843137255,
+                "r": 0.08235294117647059,
+              },
+              "right": {
+                "a": 1,
+                "b": 0,
+                "g": 0,
+                "r": 0,
+              },
+              "top": {
+                "a": 1,
+                "b": 0,
+                "g": 0,
+                "r": 0,
+              },
+            },
+            "borderWidth": {
+              "bottom": 0,
+              "left": 4,
+              "right": 0,
+              "top": 0,
+            },
+            "flexDirection": "Column",
+            "margin": {
+              "bottom": 16,
+              "left": 0,
+              "right": 0,
+              "top": 16,
+            },
+            "padding": {
+              "bottom": 16,
+              "left": 16,
+              "right": 16,
+              "top": 16,
+            },
+            "wrap": false,
+          },
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+              ],
+              "kind": {
+                "type": "View",
+              },
+              "style": {
+                "alignItems": "Center",
+                "flexDirection": "Row",
+                "flexGrow": 1,
+                "gap": 4,
+                "justifyContent": "FlexStart",
+                "minHeight": {
+                  "Pt": 4,
+                },
+              },
+            },
+            {
+              "children": [],
+              "kind": {
+                "content": "Section break",
+                "type": "Text",
+              },
+              "style": {
+                "color": {
+                  "a": 1,
+                  "b": 0.37254901960784315,
+                  "g": 0.48627450980392156,
+                  "r": 0.30196078431372547,
+                },
+                "fontFamily": "Inter",
+                "fontSize": 10,
+                "fontWeight": 500,
+                "letterSpacing": 0.5,
+                "padding": {
+                  "bottom": 0,
+                  "left": 12,
+                  "right": 12,
+                  "top": 0,
+                },
+                "textTransform": "Uppercase",
+              },
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 0,
+                      "bottom_right": 0,
+                      "top_left": 0,
+                      "top_right": 0,
+                    },
+                    "flexGrow": 1,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 4,
+                    },
+                    "width": {
+                      "Pt": 0,
+                    },
+                  },
+                },
+              ],
+              "kind": {
+                "type": "View",
+              },
+              "style": {
+                "alignItems": "Center",
+                "flexDirection": "Row",
+                "flexGrow": 1,
+                "gap": 4,
+                "justifyContent": "FlexStart",
+                "minHeight": {
+                  "Pt": 4,
+                },
+              },
+            },
+          ],
+          "kind": {
+            "type": "View",
+          },
+          "style": {
+            "alignItems": "Center",
+            "flexDirection": "Row",
+            "margin": {
+              "bottom": 14,
+              "left": 0,
+              "right": 0,
+              "top": 14,
+            },
+          },
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "kind": {
+                                "type": "View",
+                              },
+                              "style": {
+                                "backgroundColor": {
+                                  "a": 1,
+                                  "b": 0.23921568627450981,
+                                  "g": 0.5019607843137255,
+                                  "r": 0.08235294117647059,
+                                },
+                                "borderColor": {
+                                  "bottom": {
+                                    "a": 1,
+                                    "b": 0,
+                                    "g": 0,
+                                    "r": 0,
+                                  },
+                                  "left": {
+                                    "a": 1,
+                                    "b": 0,
+                                    "g": 0,
+                                    "r": 0,
+                                  },
+                                  "right": {
+                                    "a": 1,
+                                    "b": 0,
+                                    "g": 0,
+                                    "r": 0,
+                                  },
+                                  "top": {
+                                    "a": 1,
+                                    "b": 0,
+                                    "g": 0,
+                                    "r": 0,
+                                  },
+                                },
+                                "borderRadius": {
+                                  "bottom_left": 3,
+                                  "bottom_right": 3,
+                                  "top_left": 3,
+                                  "top_right": 3,
+                                },
+                                "borderWidth": {
+                                  "bottom": 0,
+                                  "left": 0,
+                                  "right": 0,
+                                  "top": 0,
+                                },
+                                "height": {
+                                  "Pt": 5,
+                                },
+                                "width": {
+                                  "Pt": 5,
+                                },
+                              },
+                            },
+                          ],
+                          "kind": {
+                            "type": "View",
+                          },
+                          "style": {
+                            "alignItems": "Center",
+                            "height": {
+                              "Pt": 16,
+                            },
+                            "margin": {
+                              "bottom": 0,
+                              "left": 0,
+                              "right": 8,
+                              "top": 6,
+                            },
+                            "width": {
+                              "Pt": 16,
+                            },
+                          },
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "kind": {
+                                "content": "First item",
+                                "type": "Text",
+                              },
+                              "style": {
+                                "color": {
+                                  "a": 1,
+                                  "b": 0.17647058823529413,
+                                  "g": 0.3254901960784314,
+                                  "r": 0.0784313725490196,
+                                },
+                                "fontFamily": "Inter",
+                                "fontSize": 11,
+                                "fontWeight": 600,
+                                "lineHeight": 1.6,
+                              },
+                            },
+                          ],
+                          "kind": {
+                            "type": "View",
+                          },
+                          "style": {
+                            "flexBasis": {
+                              "Pt": 0,
+                            },
+                            "flexGrow": 1,
+                          },
+                        },
+                      ],
+                      "kind": {
+                        "type": "View",
+                      },
+                      "style": {
+                        "alignItems": "FlexStart",
+                        "flexDirection": "Row",
+                      },
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "kind": {
+                                        "type": "View",
+                                      },
+                                      "style": {
+                                        "backgroundColor": {
+                                          "a": 1,
+                                          "b": 0,
+                                          "g": 0,
+                                          "r": 0,
+                                        },
+                                        "borderColor": {
+                                          "bottom": {
+                                            "a": 1,
+                                            "b": 0.37254901960784315,
+                                            "g": 0.48627450980392156,
+                                            "r": 0.30196078431372547,
+                                          },
+                                          "left": {
+                                            "a": 1,
+                                            "b": 0.37254901960784315,
+                                            "g": 0.48627450980392156,
+                                            "r": 0.30196078431372547,
+                                          },
+                                          "right": {
+                                            "a": 1,
+                                            "b": 0.37254901960784315,
+                                            "g": 0.48627450980392156,
+                                            "r": 0.30196078431372547,
+                                          },
+                                          "top": {
+                                            "a": 1,
+                                            "b": 0.37254901960784315,
+                                            "g": 0.48627450980392156,
+                                            "r": 0.30196078431372547,
+                                          },
+                                        },
+                                        "borderRadius": {
+                                          "bottom_left": 2,
+                                          "bottom_right": 2,
+                                          "top_left": 2,
+                                          "top_right": 2,
+                                        },
+                                        "borderWidth": {
+                                          "bottom": 1,
+                                          "left": 1,
+                                          "right": 1,
+                                          "top": 1,
+                                        },
+                                        "height": {
+                                          "Pt": 4,
+                                        },
+                                        "width": {
+                                          "Pt": 4,
+                                        },
+                                      },
+                                    },
+                                  ],
+                                  "kind": {
+                                    "type": "View",
+                                  },
+                                  "style": {
+                                    "alignItems": "Center",
+                                    "height": {
+                                      "Pt": 16,
+                                    },
+                                    "margin": {
+                                      "bottom": 0,
+                                      "left": 0,
+                                      "right": 8,
+                                      "top": 6,
+                                    },
+                                    "width": {
+                                      "Pt": 16,
+                                    },
+                                  },
+                                },
+                                {
+                                  "children": [
+                                    {
+                                      "children": [],
+                                      "kind": {
+                                        "content": "Nested item",
+                                        "type": "Text",
+                                      },
+                                      "style": {
+                                        "color": {
+                                          "a": 1,
+                                          "b": 0.37254901960784315,
+                                          "g": 0.48627450980392156,
+                                          "r": 0.30196078431372547,
+                                        },
+                                        "fontFamily": "Inter",
+                                        "fontSize": 10.5,
+                                        "fontWeight": 400,
+                                        "lineHeight": 1.6,
+                                      },
+                                    },
+                                  ],
+                                  "kind": {
+                                    "type": "View",
+                                  },
+                                  "style": {
+                                    "flexBasis": {
+                                      "Pt": 0,
+                                    },
+                                    "flexGrow": 1,
+                                  },
+                                },
+                              ],
+                              "kind": {
+                                "type": "View",
+                              },
+                              "style": {
+                                "alignItems": "FlexStart",
+                                "flexDirection": "Row",
+                              },
+                            },
+                          ],
+                          "kind": {
+                            "type": "View",
+                          },
+                          "style": {
+                            "margin": {
+                              "bottom": 0,
+                              "left": 0,
+                              "right": 0,
+                              "top": 0,
+                            },
+                            "wrap": true,
+                          },
+                        },
+                      ],
+                      "kind": {
+                        "type": "View",
+                      },
+                      "style": {
+                        "flexDirection": "Column",
+                        "margin": {
+                          "bottom": 0,
+                          "left": 20,
+                          "right": 0,
+                          "top": 4,
+                        },
+                      },
+                    },
+                  ],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "margin": {
+                      "bottom": 8,
+                      "left": 0,
+                      "right": 0,
+                      "top": 0,
+                    },
+                    "wrap": true,
+                  },
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "kind": {
+                                "type": "View",
+                              },
+                              "style": {
+                                "backgroundColor": {
+                                  "a": 1,
+                                  "b": 0.23921568627450981,
+                                  "g": 0.5019607843137255,
+                                  "r": 0.08235294117647059,
+                                },
+                                "borderColor": {
+                                  "bottom": {
+                                    "a": 1,
+                                    "b": 0,
+                                    "g": 0,
+                                    "r": 0,
+                                  },
+                                  "left": {
+                                    "a": 1,
+                                    "b": 0,
+                                    "g": 0,
+                                    "r": 0,
+                                  },
+                                  "right": {
+                                    "a": 1,
+                                    "b": 0,
+                                    "g": 0,
+                                    "r": 0,
+                                  },
+                                  "top": {
+                                    "a": 1,
+                                    "b": 0,
+                                    "g": 0,
+                                    "r": 0,
+                                  },
+                                },
+                                "borderRadius": {
+                                  "bottom_left": 3,
+                                  "bottom_right": 3,
+                                  "top_left": 3,
+                                  "top_right": 3,
+                                },
+                                "borderWidth": {
+                                  "bottom": 0,
+                                  "left": 0,
+                                  "right": 0,
+                                  "top": 0,
+                                },
+                                "height": {
+                                  "Pt": 5,
+                                },
+                                "width": {
+                                  "Pt": 5,
+                                },
+                              },
+                            },
+                          ],
+                          "kind": {
+                            "type": "View",
+                          },
+                          "style": {
+                            "alignItems": "Center",
+                            "height": {
+                              "Pt": 16,
+                            },
+                            "margin": {
+                              "bottom": 0,
+                              "left": 0,
+                              "right": 8,
+                              "top": 6,
+                            },
+                            "width": {
+                              "Pt": 16,
+                            },
+                          },
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "kind": {
+                                "content": "Second item",
+                                "type": "Text",
+                              },
+                              "style": {
+                                "color": {
+                                  "a": 1,
+                                  "b": 0.17647058823529413,
+                                  "g": 0.3254901960784314,
+                                  "r": 0.0784313725490196,
+                                },
+                                "fontFamily": "Inter",
+                                "fontSize": 11,
+                                "fontWeight": 600,
+                                "lineHeight": 1.6,
+                              },
+                            },
+                          ],
+                          "kind": {
+                            "type": "View",
+                          },
+                          "style": {
+                            "flexBasis": {
+                              "Pt": 0,
+                            },
+                            "flexGrow": 1,
+                          },
+                        },
+                      ],
+                      "kind": {
+                        "type": "View",
+                      },
+                      "style": {
+                        "alignItems": "FlexStart",
+                        "flexDirection": "Row",
+                      },
+                    },
+                  ],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "margin": {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                      "top": 0,
+                    },
+                    "wrap": true,
+                  },
+                },
+              ],
+              "kind": {
+                "type": "View",
+              },
+              "style": {
+                "flexDirection": "Column",
+                "margin": {
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                  "top": 0,
+                },
+              },
+            },
+          ],
+          "kind": {
+            "type": "View",
+          },
+          "style": {
+            "flexDirection": "Column",
+            "margin": {
+              "bottom": 14,
+              "left": 0,
+              "right": 0,
+              "top": 0,
+            },
+            "width": {
+              "Percent": 100,
+            },
+          },
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "kind": {
+                                "content": "<path d="M2 6l2.4 2.4L10 3" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />",
+                                "height": 12,
+                                "type": "Svg",
+                                "view_box": "0 0 12 12",
+                                "width": 12,
+                              },
+                              "style": {},
+                            },
+                          ],
+                          "kind": {
+                            "type": "View",
+                          },
+                          "style": {
+                            "alignItems": "Center",
+                            "backgroundColor": {
+                              "a": 1,
+                              "b": 0.23921568627450981,
+                              "g": 0.5019607843137255,
+                              "r": 0.08235294117647059,
+                            },
+                            "borderColor": {
+                              "bottom": {
+                                "a": 1,
+                                "b": 0.23921568627450981,
+                                "g": 0.5019607843137255,
+                                "r": 0.08235294117647059,
+                              },
+                              "left": {
+                                "a": 1,
+                                "b": 0.23921568627450981,
+                                "g": 0.5019607843137255,
+                                "r": 0.08235294117647059,
+                              },
+                              "right": {
+                                "a": 1,
+                                "b": 0.23921568627450981,
+                                "g": 0.5019607843137255,
+                                "r": 0.08235294117647059,
+                              },
+                              "top": {
+                                "a": 1,
+                                "b": 0.23921568627450981,
+                                "g": 0.5019607843137255,
+                                "r": 0.08235294117647059,
+                              },
+                            },
+                            "borderRadius": {
+                              "bottom_left": 4,
+                              "bottom_right": 4,
+                              "top_left": 4,
+                              "top_right": 4,
+                            },
+                            "borderWidth": {
+                              "bottom": 1,
+                              "left": 1,
+                              "right": 1,
+                              "top": 1,
+                            },
+                            "height": {
+                              "Pt": 20,
+                            },
+                            "justifyContent": "Center",
+                            "margin": {
+                              "bottom": 0,
+                              "left": 0,
+                              "right": 8,
+                              "top": 0,
+                            },
+                            "width": {
+                              "Pt": 20,
+                            },
+                          },
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "kind": {
+                                "content": "Checked",
+                                "type": "Text",
+                              },
+                              "style": {
+                                "color": {
+                                  "a": 1,
+                                  "b": 0.17647058823529413,
+                                  "g": 0.3254901960784314,
+                                  "r": 0.0784313725490196,
+                                },
+                                "fontFamily": "Inter",
+                                "fontSize": 11,
+                                "fontWeight": 400,
+                                "lineHeight": 1.6,
+                              },
+                            },
+                          ],
+                          "kind": {
+                            "type": "View",
+                          },
+                          "style": {
+                            "flexBasis": {
+                              "Pt": 0,
+                            },
+                            "flexGrow": 1,
+                          },
+                        },
+                      ],
+                      "kind": {
+                        "type": "View",
+                      },
+                      "style": {
+                        "alignItems": "Center",
+                        "flexDirection": "Row",
+                      },
+                    },
+                  ],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "margin": {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                      "top": 0,
+                    },
+                    "wrap": true,
+                  },
+                },
+              ],
+              "kind": {
+                "type": "View",
+              },
+              "style": {
+                "flexDirection": "Column",
+                "margin": {
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                  "top": 0,
+                },
+              },
+            },
+          ],
+          "kind": {
+            "type": "View",
+          },
+          "style": {
+            "flexDirection": "Column",
+            "margin": {
+              "bottom": 14,
+              "left": 0,
+              "right": 0,
+              "top": 0,
+            },
+            "width": {
+              "Percent": 100,
+            },
+          },
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "kind": {
+                            "type": "View",
+                          },
+                          "style": {
+                            "backgroundColor": {
+                              "a": 1,
+                              "b": 0.23921568627450981,
+                              "g": 0.5019607843137255,
+                              "r": 0.08235294117647059,
+                            },
+                            "borderRadius": {
+                              "bottom_left": 2,
+                              "bottom_right": 2,
+                              "top_left": 2,
+                              "top_right": 2,
+                            },
+                            "margin": {
+                              "bottom": 0,
+                              "left": 0,
+                              "right": 12,
+                              "top": 0,
+                            },
+                            "minHeight": {
+                              "Pt": 16,
+                            },
+                            "width": {
+                              "Pt": 3,
+                            },
+                          },
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "kind": {
+                                "content": "Description",
+                                "type": "Text",
+                              },
+                              "style": {
+                                "color": {
+                                  "a": 1,
+                                  "b": 0.17647058823529413,
+                                  "g": 0.3254901960784314,
+                                  "r": 0.0784313725490196,
+                                },
+                                "fontFamily": "Inter",
+                                "fontSize": 11,
+                                "fontWeight": 600,
+                                "lineHeight": 1.6,
+                              },
+                            },
+                            {
+                              "children": [],
+                              "kind": {
+                                "content": "Supporting detail",
+                                "type": "Text",
+                              },
+                              "style": {
+                                "color": {
+                                  "a": 1,
+                                  "b": 0.37254901960784315,
+                                  "g": 0.48627450980392156,
+                                  "r": 0.30196078431372547,
+                                },
+                                "fontFamily": "Inter",
+                                "fontSize": 12,
+                                "lineHeight": 1.6,
+                                "margin": {
+                                  "bottom": 0,
+                                  "left": 0,
+                                  "right": 0,
+                                  "top": 1,
+                                },
+                              },
+                            },
+                          ],
+                          "kind": {
+                            "type": "View",
+                          },
+                          "style": {
+                            "flexBasis": {
+                              "Pt": 0,
+                            },
+                            "flexGrow": 1,
+                          },
+                        },
+                      ],
+                      "kind": {
+                        "type": "View",
+                      },
+                      "style": {
+                        "alignItems": "FlexStart",
+                        "flexDirection": "Row",
+                      },
+                    },
+                  ],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "margin": {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                      "top": 0,
+                    },
+                    "wrap": true,
+                  },
+                },
+              ],
+              "kind": {
+                "type": "View",
+              },
+              "style": {
+                "flexDirection": "Column",
+                "margin": {
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                  "top": 0,
+                },
+              },
+            },
+          ],
+          "kind": {
+            "type": "View",
+          },
+          "style": {
+            "flexDirection": "Column",
+            "margin": {
+              "bottom": 14,
+              "left": 0,
+              "right": 0,
+              "top": 0,
+            },
+            "width": {
+              "Percent": 100,
+            },
+          },
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "kind": {
+                                "content": "1",
+                                "type": "Text",
+                              },
+                              "style": {
+                                "color": {
+                                  "a": 1,
+                                  "b": 1,
+                                  "g": 1,
+                                  "r": 1,
+                                },
+                                "fontFamily": "Inter",
+                                "fontSize": 10,
+                                "fontWeight": 700,
+                              },
+                            },
+                          ],
+                          "kind": {
+                            "type": "View",
+                          },
+                          "style": {
+                            "alignItems": "Center",
+                            "backgroundColor": {
+                              "a": 1,
+                              "b": 0.23921568627450981,
+                              "g": 0.5019607843137255,
+                              "r": 0.08235294117647059,
+                            },
+                            "borderColor": {
+                              "bottom": {
+                                "a": 1,
+                                "b": 0.8156862745098039,
+                                "g": 0.9686274509803922,
+                                "r": 0.7333333333333333,
+                              },
+                              "left": {
+                                "a": 1,
+                                "b": 0.8156862745098039,
+                                "g": 0.9686274509803922,
+                                "r": 0.7333333333333333,
+                              },
+                              "right": {
+                                "a": 1,
+                                "b": 0.8156862745098039,
+                                "g": 0.9686274509803922,
+                                "r": 0.7333333333333333,
+                              },
+                              "top": {
+                                "a": 1,
+                                "b": 0.8156862745098039,
+                                "g": 0.9686274509803922,
+                                "r": 0.7333333333333333,
+                              },
+                            },
+                            "borderRadius": {
+                              "bottom_left": 20,
+                              "bottom_right": 20,
+                              "top_left": 20,
+                              "top_right": 20,
+                            },
+                            "borderWidth": {
+                              "bottom": 0,
+                              "left": 0,
+                              "right": 0,
+                              "top": 0,
+                            },
+                            "height": {
+                              "Pt": 20,
+                            },
+                            "justifyContent": "Center",
+                            "margin": {
+                              "bottom": 0,
+                              "left": 0,
+                              "right": 8,
+                              "top": 0,
+                            },
+                            "width": {
+                              "Pt": 20,
+                            },
+                          },
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "kind": {
+                                "content": "Numbered",
+                                "type": "Text",
+                              },
+                              "style": {
+                                "color": {
+                                  "a": 1,
+                                  "b": 0.17647058823529413,
+                                  "g": 0.3254901960784314,
+                                  "r": 0.0784313725490196,
+                                },
+                                "fontFamily": "Inter",
+                                "fontSize": 11,
+                                "fontWeight": 400,
+                                "lineHeight": 1.6,
+                              },
+                            },
+                          ],
+                          "kind": {
+                            "type": "View",
+                          },
+                          "style": {
+                            "flexBasis": {
+                              "Pt": 0,
+                            },
+                            "flexGrow": 1,
+                          },
+                        },
+                      ],
+                      "kind": {
+                        "type": "View",
+                      },
+                      "style": {
+                        "alignItems": "Center",
+                        "flexDirection": "Row",
+                      },
+                    },
+                  ],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "margin": {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                      "top": 0,
+                    },
+                    "wrap": true,
+                  },
+                },
+              ],
+              "kind": {
+                "type": "View",
+              },
+              "style": {
+                "flexDirection": "Column",
+                "margin": {
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                  "top": 0,
+                },
+              },
+            },
+          ],
+          "kind": {
+            "type": "View",
+          },
+          "style": {
+            "flexDirection": "Column",
+            "margin": {
+              "bottom": 14,
+              "left": 0,
+              "right": 0,
+              "top": 0,
+            },
+            "width": {
+              "Percent": 100,
+            },
+          },
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "kind": {
+                                "content": "<path d="M6 1l1.4 3.3L11 4.6 8.2 7l.8 3.8L6 8.8 3 10.8 3.8 7 1 4.6l3.6-.3z" fill="#fff" />",
+                                "height": 12,
+                                "type": "Svg",
+                                "view_box": "0 0 12 12",
+                                "width": 12,
+                              },
+                              "style": {},
+                            },
+                          ],
+                          "kind": {
+                            "type": "View",
+                          },
+                          "style": {
+                            "alignItems": "Center",
+                            "backgroundColor": {
+                              "a": 1,
+                              "b": 0.23921568627450981,
+                              "g": 0.5019607843137255,
+                              "r": 0.08235294117647059,
+                            },
+                            "borderColor": {
+                              "bottom": {
+                                "a": 1,
+                                "b": 0.8156862745098039,
+                                "g": 0.9686274509803922,
+                                "r": 0.7333333333333333,
+                              },
+                              "left": {
+                                "a": 1,
+                                "b": 0.8156862745098039,
+                                "g": 0.9686274509803922,
+                                "r": 0.7333333333333333,
+                              },
+                              "right": {
+                                "a": 1,
+                                "b": 0.8156862745098039,
+                                "g": 0.9686274509803922,
+                                "r": 0.7333333333333333,
+                              },
+                              "top": {
+                                "a": 1,
+                                "b": 0.8156862745098039,
+                                "g": 0.9686274509803922,
+                                "r": 0.7333333333333333,
+                              },
+                            },
+                            "borderRadius": {
+                              "bottom_left": 4,
+                              "bottom_right": 4,
+                              "top_left": 4,
+                              "top_right": 4,
+                            },
+                            "borderWidth": {
+                              "bottom": 0,
+                              "left": 0,
+                              "right": 0,
+                              "top": 0,
+                            },
+                            "height": {
+                              "Pt": 20,
+                            },
+                            "justifyContent": "Center",
+                            "margin": {
+                              "bottom": 0,
+                              "left": 0,
+                              "right": 8,
+                              "top": 0,
+                            },
+                            "width": {
+                              "Pt": 20,
+                            },
+                          },
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "kind": {
+                                "content": "Icon",
+                                "type": "Text",
+                              },
+                              "style": {
+                                "color": {
+                                  "a": 1,
+                                  "b": 0.17647058823529413,
+                                  "g": 0.3254901960784314,
+                                  "r": 0.0784313725490196,
+                                },
+                                "fontFamily": "Inter",
+                                "fontSize": 11,
+                                "fontWeight": 400,
+                                "lineHeight": 1.6,
+                              },
+                            },
+                          ],
+                          "kind": {
+                            "type": "View",
+                          },
+                          "style": {
+                            "flexBasis": {
+                              "Pt": 0,
+                            },
+                            "flexGrow": 1,
+                          },
+                        },
+                      ],
+                      "kind": {
+                        "type": "View",
+                      },
+                      "style": {
+                        "alignItems": "Center",
+                        "flexDirection": "Row",
+                      },
+                    },
+                  ],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "margin": {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                      "top": 0,
+                    },
+                    "wrap": true,
+                  },
+                },
+              ],
+              "kind": {
+                "type": "View",
+              },
+              "style": {
+                "flexDirection": "Column",
+                "margin": {
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                  "top": 0,
+                },
+              },
+            },
+          ],
+          "kind": {
+            "type": "View",
+          },
+          "style": {
+            "flexDirection": "Column",
+            "margin": {
+              "bottom": 14,
+              "left": 0,
+              "right": 0,
+              "top": 0,
+            },
+            "width": {
+              "Percent": 100,
+            },
+          },
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+                {
+                  "children": [],
+                  "kind": {
+                    "type": "View",
+                  },
+                  "style": {
+                    "backgroundColor": {
+                      "a": 1,
+                      "b": 0.8156862745098039,
+                      "g": 0.9686274509803922,
+                      "r": 0.7333333333333333,
+                    },
+                    "borderRadius": {
+                      "bottom_left": 1,
+                      "bottom_right": 1,
+                      "top_left": 1,
+                      "top_right": 1,
+                    },
+                    "flexGrow": 0,
+                    "flexShrink": 0,
+                    "height": {
+                      "Pt": 2,
+                    },
+                    "width": {
+                      "Pt": 2,
+                    },
+                  },
+                },
+              ],
+              "kind": {
+                "type": "View",
+              },
+              "style": {
+                "alignItems": "Center",
+                "flexDirection": "Row",
+                "flexGrow": 1,
+                "gap": 3,
+                "justifyContent": "SpaceBetween",
+                "minHeight": {
+                  "Pt": 2,
+                },
+              },
+            },
+          ],
+          "kind": {
+            "type": "View",
+          },
+          "style": {
+            "alignItems": "Center",
+            "flexDirection": "Row",
+            "margin": {
+              "bottom": 14,
+              "left": 0,
+              "right": 0,
+              "top": 14,
+            },
+          },
+        },
+        {
+          "children": [],
+          "kind": {
+            "type": "PageBreak",
+          },
+          "style": {},
+        },
+        {
+          "children": [],
+          "kind": {
+            "content": "Following page",
+            "level": 3,
+            "type": "Heading",
+          },
+          "style": {
+            "color": {
+              "a": 1,
+              "b": 0.17647058823529413,
+              "g": 0.3254901960784314,
+              "r": 0.0784313725490196,
+            },
+            "fontFamily": "Merriweather",
+            "fontSize": 19,
+            "fontWeight": 700,
+            "letterSpacing": 0,
+            "lineHeight": 1.25,
+            "margin": {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "top": 0,
+            },
+          },
+        },
+      ],
+      "kind": {
+        "config": {
+          "margin": {
+            "bottom": 48,
+            "left": 48,
+            "right": 48,
+            "top": 48,
+          },
+          "size": "A4",
+          "wrap": true,
+        },
+        "type": "Page",
+      },
+      "style": {},
+    },
+  ],
+  "defaultPage": {
+    "margin": {
+      "bottom": 54,
+      "left": 54,
+      "right": 54,
+      "top": 54,
+    },
+    "size": "A4",
+    "wrap": true,
+  },
+  "metadata": {
+    "title": "Core components",
+  },
+}
+`;
