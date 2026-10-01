@@ -2,7 +2,9 @@
   import type { PDFDocumentLoadingTask } from 'pdfjs-dist';
   import { onBeforeUnmount, onMounted, ref, useTemplateRef, watch } from 'vue';
 
-  const props = defineProps<{ url: string }>();
+  const props = withDefaults(defineProps<{ url: string; renderer?: 'Forme' | 'Takumi' }>(), {
+    renderer: 'Forme',
+  });
   const container = useTemplateRef<HTMLDivElement>('container');
   const status = ref<'loading' | 'ready' | 'error'>('loading');
   const pageCount = ref<number>(0);
@@ -99,7 +101,7 @@
       v-if="status === 'ready'"
       class="pdf-page-count eyebrow pt-4 text-center font-mono text-[8px] leading-[1.6] tracking-[0.12em] text-muted-foreground uppercase"
     >
-      {{ pageCount }} {{ pageCount === 1 ? 'page' : 'pages' }} / Forme output
+      {{ pageCount }} {{ pageCount === 1 ? 'page' : 'pages' }} / {{ renderer }} output
     </p>
   </div>
 </template>

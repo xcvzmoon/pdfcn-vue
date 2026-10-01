@@ -4,6 +4,13 @@
   "homepage": "https://github.com/xcvzmoon/pdfcn-vue",
   "items": [
     {
+      "name": "takumi-core",
+      "type": "registry:lib",
+      "title": "Takumi core",
+      "description": "HTML primitives and themed core components for the Takumi PDF renderer.",
+      "categories": ["engine"]
+    },
+    {
       "name": "pdfcn-core",
       "type": "registry:lib",
       "title": "pdfcn core",

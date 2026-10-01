@@ -17,7 +17,11 @@
       "types": "./dist/forme.d.mts",
       "import": "./dist/forme.mjs"
     },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./takumi": {
+      "types": "./dist/takumi.d.mts",
+      "import": "./dist/takumi.mjs"
+    }
   },
   "scripts": {
     "build": "vp pack",
@@ -31,8 +35,8 @@
   },
   "devDependencies": {
     "@types/node": "catalog:",
-    "pdfjs-dist": "catalog:website",
     "@vitejs/plugin-vue": "catalog:",
+    "pdfjs-dist": "catalog:website",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plus": "catalog:",
@@ -41,6 +45,8 @@
   },
   "dependencies": {
     "@formepdf/core": "catalog:",
-    "@formepdf/vue": "catalog:"
+    "@formepdf/vue": "catalog:",
+    "@vue/server-renderer": "catalog:",
+    "takumi-pdf": "catalog:"
   }
 }

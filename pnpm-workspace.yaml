@@ -10,6 +10,8 @@ catalog:
   '@formepdf/vue': 0.25.0
   '@types/node': ^24
   '@vitejs/plugin-vue': ^6.0.9
+  '@vue/server-renderer': ^3.5.43
+  takumi-pdf: 0.15.0
   typescript: ^6.0.3
   vite: npm:@voidzero-dev/vite-plus-core@1.0.0
   vite-plus: 1.0.0
